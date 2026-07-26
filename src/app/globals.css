@@ -1,0 +1,127 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: 'Tenor Sans', sans-serif;
+  --font-sans: 'Inter', sans-serif;
+}
+
+
+@layer base {
+  :root {
+    --brand-purple: #8162BB;
+    --brand-purple-dark: #5C4092;
+    --brand-purple-light: #F3EEF9;
+    --brand-purple-glow: rgba(129, 98, 187, 0.15);
+    --bg-warm: #FAF8F5;
+    --bg-ivory: #FFFDF9;
+    --text-main: #1A191D;
+    --text-muted: #6B6875;
+    --accent-gold: #D4AF37;
+    --accent-gold-soft: #F4E8C1;
+  }
+
+  body {
+    background-color: var(--bg-warm);
+    color: var(--text-main);
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+  }
+
+  h1, h2, h3, .font-serif-title {
+    font-family: 'Tenor Sans', sans-serif;
+    letter-spacing: -0.01em;
+  }
+
+  .font-subserif {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+  }
+}
+
+/* Custom Utilities for Luxury Theme */
+.text-gold {
+  color: var(--accent-gold);
+}
+
+.bg-brand-purple {
+  background-color: var(--brand-purple);
+}
+
+.text-brand-purple {
+  color: var(--brand-purple);
+}
+
+.border-brand-purple {
+  border-color: var(--brand-purple);
+}
+
+.glass-nav {
+  background: rgba(250, 248, 245, 0.82);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(129, 98, 187, 0.1);
+}
+
+.glass-dark {
+  background: rgba(26, 25, 29, 0.85);
+  backdrop-filter: blur(16px);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF8F5;
+}
+::-webkit-scrollbar-thumb {
+  background: #C4B8DC;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #8162BB;
+}
+
+/* Pinterest Masonry Layout Helper */
+.masonry-columns {
+  column-count: 1;
+  column-gap: 1.25rem;
+}
+
+@media (min-width: 640px) {
+  .masonry-columns {
+    column-count: 2;
+  }
+}
+
+@media (min-width: 1024px) {
+  .masonry-columns {
+    column-count: 3;
+  }
+}
+
+.masonry-item {
+  break-inside: avoid;
+  margin-bottom: 1.25rem;
+}
+
+/* GSAP & Animation Helper classes */
+.gsap-reveal {
+  opacity: 1;
+  transform: translateY(0);
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.6s ease;
+}
+
+.hover-lift {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px -15px rgba(129, 98, 187, 0.2);
+}

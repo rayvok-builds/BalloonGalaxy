@@ -1,0 +1,93 @@
+export const LOCATIONS_DATA = [
+  {
+    slug: 'birmingham',
+    cityName: 'Birmingham',
+    title: 'Luxury Balloon Decorations Birmingham',
+    metaTitle: 'Balloon Decor Birmingham | Luxury Balloon Arches & Backdrops',
+    metaDescription: 'Premier luxury balloon styling in Birmingham. Serving Edgbaston, Sutton Coldfield, Harborne, Solihull & City Centre. 143+ 5★ Reviews.',
+    heroHeadline: 'Birmingham’s Premier Luxury Balloon Stylist',
+    heroSubheading: 'Transforming birthdays, weddings, baby showers, and corporate events across Birmingham with bespoke balloon art.',
+    areasServed: ['Edgbaston', 'Sutton Coldfield', 'Harborne', 'Moseley', 'Jewellery Quarter', 'Solihull', 'NEC Birmingham', 'Digbeth'],
+    popularVenues: ['The Grand Hotel Birmingham', 'Highbury Hall', 'NMC Birmingham', 'Edgbaston Park Hotel', 'Banqueting Suites'],
+    googleMapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d155554.49887754665!2d-2.004033783777598!3d52.47741641042502!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4870942d1b417173%3A0xca81f10aee710d8a!2sBirmingham%2C%20UK!5e0!3m2!1sen!2suk!4v1700000000000!5m2!1sen!2suk",
+    introText: 'Based right here in the West Midlands, Balloon Galaxy is Birmingham’s leading luxury balloon decorator. Founded in October 2022 by Kam, we bring artistic flair and pristine execution to events across Edgbaston, Sutton Coldfield, Harborne, and Birmingham City Centre.'
+  },
+  {
+    slug: 'coventry',
+    cityName: 'Coventry',
+    title: 'Luxury Balloon Styling Coventry',
+    metaTitle: 'Balloon Decorations Coventry | Arches, Backdrops & Party Styling',
+    metaDescription: 'Bespoke balloon arch & backdrop installation in Coventry & Warwickshire. 5★ rated balloon decorator for baby showers & weddings.',
+    heroHeadline: 'Coventry’s Favorite Bespoke Balloon Stylist',
+    heroSubheading: 'Creating unforgettable milestone balloon displays for families and businesses throughout Coventry.',
+    areasServed: ['Stivichall', 'Earlsdon', 'Finham', 'Allesley', 'Tile Hill', 'Walsgrave', 'Binley', 'Kenilworth'],
+    popularVenues: ['Coombe Abbey Hotel', 'St Mary’s Guildhall', 'Windmill Village Hotel', 'Ansty Hall'],
+    googleMapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d155688.02677983637!2d-1.5724213798547494!3d52.41165682855589!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48774b78912d7c0f%3A0x6b4594c798fc1c7a!2sCoventry%2C%20UK!5e0!3m2!1sen!2suk!4v1700000000000!5m2!1sen!2suk",
+    introText: 'From grand weddings at Coombe Abbey to birthday setups in Earlsdon, Balloon Galaxy is Coventry’s go-to specialist for double-stuffed luxury balloon garlands and custom backdrops.'
+  },
+  {
+    slug: 'solihull',
+    cityName: 'Solihull',
+    title: 'Luxury Balloon Decorations Solihull',
+    metaTitle: 'Balloon Decor Solihull | Premium Birthday & Baby Shower Balloons',
+    metaDescription: 'Luxury balloon styling in Solihull, Knowle, Dorridge & Shirley. Premium backdrops, organic arches & 4ft LED numbers.',
+    heroHeadline: 'Solihull Luxury Event & Balloon Styling',
+    heroSubheading: 'High-end balloon displays crafted for luxury homes, boutique venues, and private celebrations in Solihull.',
+    areasServed: ['Knowle', 'Dorridge', 'Shirley', 'Dickens Heath', 'Hampton in Arden', 'Olton', 'Balsall Common'],
+    popularVenues: ['Hogarths Hotel', 'The St Johns Hotel', 'Voco St Johns', 'Forest Hotel', 'Private Solihull Estates'],
+    googleMapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d77750.56708605897!2d-1.8340156903264426!3d52.41444983056157!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4870ba93df9df597%3A0x8673752179a6d71b!2sSolihull%2C%20UK!5e0!3m2!1sen!2suk!4v1700000000000!5m2!1sen!2suk",
+    introText: 'Solihull clients trust Balloon Galaxy for our meticulous attention to detail, soft aesthetic color palettes, and flawless venue installations.'
+  },
+  {
+    slug: 'wolverhampton',
+    cityName: 'Wolverhampton',
+    title: 'Balloon Decorations Wolverhampton',
+    metaTitle: 'Wolverhampton Balloon Decor | Arches, Light-Up Numbers & Styling',
+    metaDescription: 'Bespoke balloon arches, garlands and backdrop setups across Wolverhampton, Tettenhall & West Midlands.',
+    heroHeadline: 'Wolverhampton Event Balloon Installations',
+    heroSubheading: 'Bespoke balloon styling that elevates birthdays, gender reveals, and corporate events across Wolverhampton.',
+    areasServed: ['Tettenhall', 'Penn', 'Compton', 'Wightwick', 'Wombourne', 'Codsall', 'Bilston'],
+    popularVenues: ['Mount Hotel Country House', 'Grand Theatre Hall', 'Ramada Park Hall', 'Tettenhall Wood Rooms'],
+    googleMapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d155416.74542263435!2d-2.203875323533814!3d52.58933333333333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48709bc872e42ef9%3A0x15f7f98b79f2987a!2sWolverhampton%2C%20UK!5e0!3m2!1sen!2suk!4v1700000000000!5m2!1sen!2suk",
+    introText: 'We regularly travel across Wolverhampton providing custom balloon setups, light-up number hire, and sailboard backdrops.'
+  },
+  {
+    slug: 'warwick',
+    cityName: 'Warwick',
+    title: 'Luxury Balloon Decor Warwick',
+    metaTitle: 'Balloon Styling Warwick & Leamington | Wedding & Event Balloons',
+    metaDescription: 'Luxury wedding & event balloon installations in historic Warwick. Custom organic garlands, hoops and sailboards.',
+    heroHeadline: 'Warwick’s Premier Luxury Event Stylist',
+    heroSubheading: 'Sophisticated balloon decor tailored for historic venues, weddings, and milestone celebrations in Warwick.',
+    areasServed: ['Warwick Town', 'Barford', 'Leek Wootton', 'Hatton', 'Whitnash', 'Bishop’s Tachbrook'],
+    popularVenues: ['Warwick Castle', 'Lord Leycester Hospital', 'The Pageant House', 'Guy’s Cliffe House'],
+    googleMapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d77897.64332906232!2d-1.6361819777983693!3d52.28186178351509!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4877cbbcf2c28cd5%3A0xa6432b49d63c9388!2sWarwick%2C%20UK!5e0!3m2!1sen!2suk!4v1700000000000!5m2!1sen!2suk",
+    introText: 'Warwick venues demand elegant styling. Balloon Galaxy specializes in organic wedding arches and subtle backdrop installations that complement historic architecture.'
+  },
+  {
+    slug: 'leamington-spa',
+    cityName: 'Leamington Spa',
+    title: 'Balloon Styling Leamington Spa',
+    metaTitle: 'Leamington Spa Balloon Decor | Baby Showers & Birthday Styling',
+    metaDescription: 'Stylish balloon arches, garlands & custom backdrops in Royal Leamington Spa & surrounding Warwickshire areas.',
+    heroHeadline: 'Bespoke Balloons in Royal Leamington Spa',
+    heroSubheading: 'Stylish balloon architecture for baby showers, birthdays, and store launches in Leamington Spa.',
+    areasServed: ['Royal Leamington Spa', 'Cubbington', 'Milverton', 'Lillington', 'Radford Semele'],
+    popularVenues: ['Mallory Court Hotel', 'Epsom Rooms', 'Royal Pump Rooms', 'Jephson Gardens Pavilion'],
+    googleMapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d77884.2811467439!2d-1.5794563870876798!3d52.29212004245648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4877cb3666dcb00b%3A0x7d6a54e6dd3543d3!2sRoyal%20Leamington%20Spa%2C%20Leamington%20Spa%2C%20UK!5e0!3m2!1sen!2suk!4v1700000000000!5m2!1sen!2suk",
+    introText: 'Bringing fashion-forward balloon styling to Royal Leamington Spa with custom color palettes, velvet touch finishes, and metallic accents.'
+  },
+  {
+    slug: 'west-midlands',
+    cityName: 'West Midlands',
+    title: 'Luxury Balloon Decor West Midlands',
+    metaTitle: 'West Midlands Balloon Decorations & Styling | Balloon Galaxy',
+    metaDescription: 'Covering Birmingham, Coventry, Solihull, Wolverhampton, Walsall, Warwick & entire West Midlands. 143+ 5★ Google Reviews.',
+    heroHeadline: 'West Midlands Regional Luxury Balloon Decor',
+    heroSubheading: 'Serving every corner of the West Midlands with complete delivery, setup, and prop styling.',
+    areasServed: ['Birmingham', 'Coventry', 'Solihull', 'Wolverhampton', 'Walsall', 'Warwick', 'Leamington Spa', 'Dudley', 'Sutton Coldfield'],
+    popularVenues: ['NEC Birmingham', 'ICC Birmingham', 'Coombe Abbey', 'Hogarths Hotel', 'Warwick Castle'],
+    googleMapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d622353.4795232675!2d-2.2858882000000003!3d52.47741641042502!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4870942d1b417173%3A0xca81f10aee710d8a!2sWest%20Midlands%2C%20UK!5e0!3m2!1sen!2suk!4v1700000000000!5m2!1sen!2suk",
+    introText: 'Balloon Galaxy provides luxury balloon styling throughout the entire West Midlands region. No matter your venue location, we handle transportation, inflation, and artful installation.'
+  }
+];
