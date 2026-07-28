@@ -46,7 +46,7 @@ export default function Home() {
       <HowItWorks onOpenQuoteModal={openQuoteModal} />
 
       {/* 8. Video Section (Auto-Playing Muted Reels) */}
-      <VideoShowcase />
+      {/* <VideoShowcase />  */} 
 
       {/* 9. Meet The Team (Kam & Sandeep Founder Story) */}
       <MeetTheTeam />

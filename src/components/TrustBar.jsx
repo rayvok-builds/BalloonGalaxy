@@ -70,7 +70,7 @@ export default function TrustBar() {
   ];
 
   return (
-    <section className="bg-[#121118] border-y border-purple-900/20 py-12 sm:py-16 px-4 sm:px-6 lg:px-8 relative z-20">
+    <section className="  bg-[#0B0A0E]  py-12 sm:py-16 px-4 sm:px-6 lg:px-8 relative z-20">
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 text-center">
           {stats.map((stat, idx) => (
