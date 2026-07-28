@@ -84,9 +84,9 @@ export default function FaqAccordion({ onOpenQuoteModal }) {
           </div>
           <button
             onClick={onOpenQuoteModal}
-            className="shrink-0 bg-[#8162BB] text-white px-6 py-3 rounded-full text-xs font-semibold hover:bg-[#5C4092] transition-all flex items-center gap-1.5"
+            className="shrink-0 bg-[#8162BB] text-white px-6 py-3 rounded-full text-xs font-semibold hover:bg-[#5C4092] transition-all shadow-[inset_0_2px_4px_rgba(0,0,0,0.3)] cursor-pointer hover:cursor-pointer"
           >
-            <Sparkles className="w-3.5 h-3.5" /> Ask Kam a Question
+            Ask Kam a Question
           </button>
         </div>
 

@@ -111,7 +111,7 @@ export default function QuoteBuilderModal({ isOpen, onClose }) {
                   <button
                     type="button"
                     onClick={() => setStep(2)}
-                    className="w-full mt-6 bg-[#8162BB] text-white py-3.5 rounded-2xl font-medium text-sm flex items-center justify-center gap-2 hover:bg-[#5C4092] transition-all"
+                    className="w-full mt-6 bg-[#8162BB] text-white py-3.5 rounded-2xl font-medium text-sm flex items-center justify-center gap-2 hover:bg-[#5C4092] transition-all shadow-[inset_0_2px_4px_rgba(0,0,0,0.3)] cursor-pointer hover:cursor-pointer"
                   >
                     Next: Preferred Decor Style →
                   </button>
@@ -130,7 +130,7 @@ export default function QuoteBuilderModal({ isOpen, onClose }) {
                         key={st.id}
                         type="button"
                         onClick={() => setStyle(st.id)}
-                        className={`w-full p-4 rounded-2xl border text-left flex items-center justify-between transition-all ${
+                        className={`w-full p-4 rounded-2xl border text-left flex items-center justify-between transition-all cursor-pointer ${
                           style === st.id
                             ? 'border-[#8162BB] bg-[#F3EEF9] ring-2 ring-[#8162BB]/30'
                             : 'border-neutral-200 hover:border-neutral-400 bg-[#FAF8F5]'
@@ -149,14 +149,14 @@ export default function QuoteBuilderModal({ isOpen, onClose }) {
                     <button
                       type="button"
                       onClick={() => setStep(1)}
-                      className="w-1/3 border border-neutral-300 text-neutral-700 py-3.5 rounded-2xl text-xs font-semibold"
+                      className="w-1/3 border border-neutral-300 text-neutral-700 py-3.5 rounded-2xl text-xs font-semibold cursor-pointer"
                     >
                       ← Back
                     </button>
                     <button
                       type="button"
                       onClick={() => setStep(3)}
-                      className="w-2/3 bg-[#8162BB] text-white py-3.5 rounded-2xl font-medium text-sm flex items-center justify-center gap-2 hover:bg-[#5C4092]"
+                      className="w-2/3 bg-[#8162BB] text-white py-3.5 rounded-2xl font-medium text-sm flex items-center justify-center gap-2 hover:bg-[#5C4092] shadow-[inset_0_2px_4px_rgba(0,0,0,0.3)] cursor-pointer hover:cursor-pointer"
                     >
                       Next: Color Palette Swatches →
                     </button>
@@ -176,7 +176,7 @@ export default function QuoteBuilderModal({ isOpen, onClose }) {
                         key={pal.id}
                         type="button"
                         onClick={() => setColorPalette(pal.id)}
-                        className={`p-4 rounded-2xl border text-left flex items-center justify-between transition-all ${
+                        className={`p-4 rounded-2xl border text-left flex items-center justify-between transition-all cursor-pointer ${
                           colorPalette === pal.id
                             ? 'border-[#8162BB] bg-[#F3EEF9] ring-2 ring-[#8162BB]/30'
                             : 'border-neutral-200 hover:border-neutral-400 bg-[#FAF8F5]'
@@ -203,14 +203,14 @@ export default function QuoteBuilderModal({ isOpen, onClose }) {
                     <button
                       type="button"
                       onClick={() => setStep(2)}
-                      className="w-1/3 border border-neutral-300 text-neutral-700 py-3.5 rounded-2xl text-xs font-semibold"
+                      className="w-1/3 border border-neutral-300 text-neutral-700 py-3.5 rounded-2xl text-xs font-semibold cursor-pointer"
                     >
                       ← Back
                     </button>
                     <button
                       type="button"
                       onClick={() => setStep(4)}
-                      className="w-2/3 bg-[#8162BB] text-white py-3.5 rounded-2xl font-medium text-sm flex items-center justify-center gap-2 hover:bg-[#5C4092]"
+                      className="w-2/3 bg-[#8162BB] text-white py-3.5 rounded-2xl font-medium text-sm flex items-center justify-center gap-2 hover:bg-[#5C4092] shadow-[inset_0_2px_4px_rgba(0,0,0,0.3)] cursor-pointer hover:cursor-pointer"
                     >
                       Next: Event Details →
                     </button>
@@ -289,15 +289,15 @@ export default function QuoteBuilderModal({ isOpen, onClose }) {
                     <button
                       type="button"
                       onClick={() => setStep(3)}
-                      className="w-1/3 border border-neutral-300 text-neutral-700 py-3.5 rounded-2xl text-xs font-semibold"
+                      className="w-1/3 border border-neutral-300 text-neutral-700 py-3.5 rounded-2xl text-xs font-semibold cursor-pointer"
                     >
                       ← Back
                     </button>
                     <button
                       type="submit"
-                      className="w-2/3 bg-[#8162BB] hover:bg-[#5C4092] text-white py-3.5 rounded-2xl font-bold text-sm flex items-center justify-center gap-2 shadow-lg"
+                      className="w-2/3 bg-[#8162BB] hover:bg-[#5C4092] text-white py-3.5 rounded-2xl font-bold text-sm flex items-center justify-center gap-2 shadow-[inset_0_2px_4px_rgba(0,0,0,0.3)] cursor-pointer hover:cursor-pointer"
                     >
-                      <Sparkles className="w-4 h-4 text-amber-300" /> Request My Custom Proposal
+                      Request My Custom Proposal
                     </button>
                   </div>
                 </div>
@@ -328,7 +328,7 @@ export default function QuoteBuilderModal({ isOpen, onClose }) {
                   href={`https://wa.me/447841696582?text=${encodeURIComponent(whatsappMessage)}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full sm:w-auto bg-[#8162BB] text-white px-6 py-3 rounded-full text-xs font-semibold shadow-md flex items-center justify-center gap-2"
+                  className="w-full sm:w-auto bg-[#8162BB] text-white px-6 py-3 rounded-full text-xs font-semibold shadow-[inset_0_2px_4px_rgba(0,0,0,0.3)] cursor-pointer hover:cursor-pointer flex items-center justify-center gap-2"
                 >
                   Send Instantly via WhatsApp
                 </a>

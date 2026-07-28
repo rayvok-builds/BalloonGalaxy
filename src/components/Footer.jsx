@@ -52,8 +52,8 @@ export default function Footer() {
             {/* Contact Details */}
             <div className="space-y-2 pt-2 text-xs text-neutral-300">
               <div className="flex items-center gap-2">
-                <Phone className="w-4 h-4 text-[#8162BB]" />
-                <a href="tel:+447841696582" className="hover:text-white">+44 7841 696582</a>
+                <img src="/callIcon - Copy.gif" alt="Call" className="w-4 h-4 object-contain" />
+                <a href="tel:+447841696582" className="hover:text-white cursor-pointer">+44 7841 696582</a>
               </div>
               <div className="flex items-center gap-2">
                 <Instagram className="w-4 h-4 text-[#8162BB]" />

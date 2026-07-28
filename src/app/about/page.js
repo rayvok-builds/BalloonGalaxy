@@ -49,7 +49,7 @@ export default function AboutPage() {
             </div>
             <button
               onClick={() => setIsQuoteOpen(true)}
-              className="bg-[#8162BB] text-white text-xs font-semibold px-6 py-3 rounded-full hover:bg-[#5C4092] transition-all"
+              className="bg-[#8162BB] text-white text-xs font-semibold px-6 py-3 rounded-full hover:bg-[#5C4092] transition-all shadow-[inset_0_2px_4px_rgba(0,0,0,0.3)] cursor-pointer hover:cursor-pointer"
             >
               Plan Your Event With Kam
             </button>

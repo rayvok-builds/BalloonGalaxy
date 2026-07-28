@@ -22,7 +22,7 @@ export default function QuoteBuilderPage() {
 
         <button
           onClick={() => setIsOpen(true)}
-          className="mt-6 bg-[#8162BB] text-white px-8 py-4 rounded-full font-semibold text-sm shadow-xl"
+          className="mt-6 bg-[#8162BB] text-white px-8 py-4 rounded-full font-semibold text-sm shadow-[inset_0_2px_4px_rgba(0,0,0,0.3)] cursor-pointer hover:cursor-pointer"
         >
           Open Visual Builder Window
         </button>

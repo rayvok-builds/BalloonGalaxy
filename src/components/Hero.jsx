@@ -65,7 +65,7 @@ export default function Hero({ onOpenQuoteModal }) {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-5 mb-5">
           <button
             onClick={onOpenQuoteModal}
-            className="w-full sm:w-auto inline-flex items-center justify-center bg-[#8162BB] hover:bg-[#5C4092] text-white font-medium text-base px-9 py-3.5 rounded-full shadow-2xl shadow-inner shadow-purple-900/50 hover:scale-105 active:scale-95 transition-all duration-300"
+            className="w-full sm:w-auto inline-flex items-center justify-center bg-[#8162BB] hover:bg-[#5C4092] text-white font-medium text-base px-9 py-3.5 rounded-full shadow-[inset_0_2px_4px_rgba(0,0,0,0.3)] cursor-pointer hover:cursor-pointer hover:scale-105 active:scale-95 transition-all duration-300"
           >
             Get Your Free Quote
           </button>

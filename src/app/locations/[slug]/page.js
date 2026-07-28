@@ -56,9 +56,9 @@ export default function LocationDetailPage({ params }) {
 
             <button
               onClick={() => setIsQuoteOpen(true)}
-              className="bg-[#8162BB] hover:bg-[#5C4092] text-white px-8 py-4 rounded-full text-sm font-semibold shadow-lg flex items-center gap-2"
+              className="bg-[#8162BB] hover:bg-[#5C4092] text-white px-8 py-4 rounded-full text-sm font-semibold shadow-[inset_0_2px_4px_rgba(0,0,0,0.3)] cursor-pointer hover:cursor-pointer flex items-center justify-center"
             >
-              <Sparkles className="w-4 h-4 text-amber-300" /> Book {loc.cityName} Balloon Decor
+              Book {loc.cityName} Balloon Decor
             </button>
           </div>
 

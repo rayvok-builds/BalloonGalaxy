@@ -94,9 +94,9 @@ export default function WhyChooseUs({ onOpenQuoteModal }) {
 
                 <button
                   onClick={onOpenQuoteModal}
-                  className="inline-flex items-center gap-2 bg-[#8162BB] hover:bg-[#5C4092] text-white text-xs font-medium px-6 py-3 rounded-full shadow-md transition-all"
+                  className="inline-flex items-center justify-center bg-[#8162BB] hover:bg-[#5C4092] text-white text-xs font-medium px-6 py-3 rounded-full shadow-[inset_0_2px_4px_rgba(0,0,0,0.3)] cursor-pointer hover:cursor-pointer transition-all"
                 >
-                  <Sparkles className="w-3.5 h-3.5" /> Start My Booking
+                  Start My Booking
                 </button>
               </div>
 

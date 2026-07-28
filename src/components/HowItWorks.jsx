@@ -97,9 +97,9 @@ export default function HowItWorks({ onOpenQuoteModal }) {
         <div className="text-center mt-12">
           <button
             onClick={onOpenQuoteModal}
-            className="inline-flex items-center gap-2 bg-[#8162BB] hover:bg-[#5C4092] text-white text-sm font-medium px-8 py-4 rounded-full shadow-lg hover:scale-105 transition-all"
+            className="inline-flex items-center justify-center bg-[#8162BB] hover:bg-[#5C4092] text-white text-sm font-medium px-8 py-4 rounded-full shadow-[inset_0_2px_4px_rgba(0,0,0,0.3)] cursor-pointer hover:cursor-pointer hover:scale-105 transition-all"
           >
-            <Sparkles className="w-4 h-4 text-amber-300" /> Start Step 1 - Get Free Quote
+            Start Step 1 - Get Free Quote
           </button>
         </div>
 

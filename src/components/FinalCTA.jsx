@@ -28,17 +28,16 @@ export default function FinalCTA({ onOpenQuoteModal }) {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
           <button
             onClick={onOpenQuoteModal}
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-[#8162BB] hover:bg-[#5C4092] text-white font-medium text-base px-9 py-4.5 rounded-full shadow-2xl shadow-purple-900/50 hover:scale-105 transition-all"
+            className="w-full sm:w-auto inline-flex items-center justify-center bg-[#8162BB] hover:bg-[#5C4092] text-white font-medium text-base px-9 py-4.5 rounded-full shadow-[inset_0_2px_4px_rgba(0,0,0,0.3)] cursor-pointer hover:cursor-pointer hover:scale-105 transition-all"
           >
-            <Sparkles className="w-5 h-5 text-amber-300" />
             Get Your Free Quote
           </button>
 
           <a
             href="tel:+447841696582"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-white/10 hover:bg-white/20 text-white border border-white/20 font-medium text-base px-8 py-4.5 rounded-full backdrop-blur-md transition-all"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-white/10 hover:bg-white/20 text-white border border-white/20 font-medium text-base px-8 py-4.5 rounded-full backdrop-blur-md transition-all cursor-pointer"
           >
-            <Phone className="w-5 h-5 text-[#8162BB]" />
+            <img src="/callIcon - Copy.gif" alt="Call" className="w-5 h-5 object-contain" />
             Call Us Today (+44 7841 696582)
           </a>
         </div>

@@ -43,10 +43,10 @@ export default function ContactPage() {
             <div className="space-y-6">
               <a
                 href="tel:+447841696582"
-                className="flex items-start gap-4 p-4 rounded-2xl bg-[#FAF8F5] border border-neutral-200 hover:border-[#8162BB] transition-colors"
+                className="flex items-start gap-4 p-4 rounded-2xl bg-[#FAF8F5] border border-neutral-200 hover:border-[#8162BB] transition-colors cursor-pointer"
               >
                 <div className="w-10 h-10 rounded-full bg-[#8162BB] text-white flex items-center justify-center shrink-0">
-                  <Phone className="w-5 h-5" />
+                  <img src="/callIcon - Copy.gif" alt="Call" className="w-5 h-5 object-contain" />
                 </div>
                 <div>
                   <div className="text-xs text-neutral-500 font-semibold uppercase">Phone / Call</div>
@@ -59,10 +59,10 @@ export default function ContactPage() {
                 href="https://wa.me/447841696582"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-start gap-4 p-4 rounded-2xl bg-emerald-50 border border-emerald-200 hover:border-emerald-500 transition-colors"
+                className="flex items-start gap-4 p-4 rounded-2xl bg-emerald-50 border border-emerald-200 hover:border-emerald-500 transition-colors cursor-pointer"
               >
                 <div className="w-10 h-10 rounded-full bg-emerald-500 text-white flex items-center justify-center shrink-0">
-                  💬
+                  <img src="/whatsappicon - Copy.gif" alt="WhatsApp" className="w-5 h-5 object-contain" />
                 </div>
                 <div>
                   <div className="text-xs text-emerald-800 font-semibold uppercase">WhatsApp Chat</div>
@@ -186,9 +186,9 @@ export default function ContactPage() {
 
                 <button
                   type="submit"
-                  className="w-full bg-[#8162BB] hover:bg-[#5C4092] text-white py-4 rounded-xl font-bold text-sm shadow-md flex items-center justify-center gap-2"
+                  className="w-full bg-[#8162BB] hover:bg-[#5C4092] text-white py-4 rounded-xl font-bold text-sm shadow-[inset_0_2px_4px_rgba(0,0,0,0.3)] cursor-pointer hover:cursor-pointer flex items-center justify-center"
                 >
-                  <Send className="w-4 h-4" /> Send Message To Kam
+                  Send Message To Kam
                 </button>
               </form>
             ) : (

@@ -135,15 +135,15 @@ export default function Packages({ onOpenQuoteModal }) {
               {/* Action Button */}
               <button
                 onClick={onOpenQuoteModal}
-                className={`w-full py-4 rounded-2xl font-medium text-xs sm:text-sm flex items-center justify-center gap-2 shadow-md transition-all ${
+                className={`w-full py-4 rounded-2xl font-medium text-xs sm:text-sm flex items-center justify-center gap-2 cursor-pointer hover:cursor-pointer transition-all ${
                   pkg.isDark
-                    ? 'bg-amber-400 hover:bg-amber-300 text-neutral-900 font-bold'
+                    ? 'bg-amber-400 hover:bg-amber-300 text-neutral-900 font-bold shadow-md'
                     : pkg.popular
-                    ? 'bg-[#8162BB] hover:bg-[#5C4092] text-white'
-                    : 'bg-neutral-900 hover:bg-neutral-800 text-white'
+                    ? 'bg-[#8162BB] hover:bg-[#5C4092] text-white shadow-[inset_0_2px_4px_rgba(0,0,0,0.3)]'
+                    : 'bg-neutral-900 hover:bg-neutral-800 text-white shadow-md'
                 }`}
               >
-                <Sparkles className="w-4 h-4" /> {pkg.ctaText}
+                {pkg.popular ? null : <Sparkles className="w-4 h-4" />} {pkg.ctaText}
               </button>
 
             </div>

@@ -154,19 +154,19 @@ export default function Navbar({ onOpenQuoteModal }) {
           <div className="hidden sm:flex items-center gap-4">
             <a
               href="tel:+447841696582"
-              className={`flex items-center gap-2 text-xs font-semibold px-3 py-2 rounded-full border transition-all ${
+              className={`flex items-center gap-2 text-xs font-semibold px-3 py-2 rounded-full border transition-all cursor-pointer ${
                 showSolidBg
                   ? 'text-neutral-800 border-neutral-200 hover:border-[#8162BB] hover:text-[#8162BB]'
                   : 'text-white border-white/20 hover:border-white/50 hover:bg-white/10'
               }`}
             >
-              <Phone className={`w-3.5 h-3.5 transition-colors ${showSolidBg ? 'text-[#8162BB]' : 'text-white'}`} />
+              <img src="/callIcon - Copy.gif" alt="Call" className="w-4 h-4 object-contain" />
               +44 7841 696582
             </a>
 
             <button
               onClick={onOpenQuoteModal}
-              className="flex items-center gap-2 bg-[#8162BB] hover:bg-[#5C4092] text-white text-xs font-medium px-5 py-2.5 rounded-full shadow-lg shadow-purple-900/20 hover:shadow-purple-900/40 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300"
+              className="flex items-center gap-2 bg-[#8162BB] hover:bg-[#5C4092] text-white text-xs font-medium px-5 py-2.5 rounded-full shadow-[inset_0_2px_4px_rgba(0,0,0,0.3)] cursor-pointer hover:cursor-pointer hover:scale-[1.02] active:scale-[0.98] transition-all duration-300"
             >
               Get Your Free Quote
             </button>
@@ -175,7 +175,7 @@ export default function Navbar({ onOpenQuoteModal }) {
           {/* Mobile Hamburger Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className={`lg:hidden p-2 transition-colors ${
+            className={`lg:hidden p-2 transition-colors cursor-pointer ${
               showSolidBg ? 'text-neutral-700 hover:text-[#8162BB]' : 'text-white hover:text-purple-200'
             }`}
           >
@@ -236,16 +236,16 @@ export default function Navbar({ onOpenQuoteModal }) {
                 setIsMobileMenuOpen(false);
                 onOpenQuoteModal();
               }}
-              className="w-full bg-[#8162BB] text-white py-3 rounded-full font-medium text-sm flex items-center justify-center gap-2 shadow-md"
+              className="w-full bg-[#8162BB] text-white py-3 rounded-full font-medium text-sm flex items-center justify-center shadow-[inset_0_2px_4px_rgba(0,0,0,0.3)] cursor-pointer hover:cursor-pointer"
             >
-              <Sparkles className="w-4 h-4" /> Get Your Free Quote
+              Get Your Free Quote
             </button>
 
             <a
               href="tel:+447841696582"
-              className="w-full text-center py-2.5 rounded-full border border-neutral-200 text-sm font-semibold text-neutral-800 flex items-center justify-center gap-2"
+              className="w-full text-center py-2.5 rounded-full border border-neutral-200 text-sm font-semibold text-neutral-800 flex items-center justify-center gap-2 cursor-pointer"
             >
-              <Phone className="w-4 h-4 text-[#8162BB]" /> Call +44 7841 696582
+              <img src="/callIcon - Copy.gif" alt="Call" className="w-4 h-4 object-contain" /> Call +44 7841 696582
             </a>
           </div>
         </div>

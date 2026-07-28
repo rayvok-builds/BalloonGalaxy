@@ -93,9 +93,9 @@ export default function LightboxModal({ item, onClose, onOpenQuoteModal }) {
                 onClose();
                 onOpenQuoteModal();
               }}
-              className="w-full bg-[#8162BB] hover:bg-[#5C4092] text-white py-3.5 rounded-2xl font-medium text-sm flex items-center justify-center gap-2 shadow-lg shadow-purple-900/30 hover:scale-[1.02] transition-all"
+              className="w-full bg-[#8162BB] hover:bg-[#5C4092] text-white py-3.5 rounded-2xl font-medium text-sm flex items-center justify-center gap-2 shadow-[inset_0_2px_4px_rgba(0,0,0,0.3)] cursor-pointer hover:cursor-pointer hover:scale-[1.02] transition-all"
             >
-              <Sparkles className="w-4 h-4" /> Request Quote For This Style
+              Request Quote For This Style
             </button>
           </div>
 
