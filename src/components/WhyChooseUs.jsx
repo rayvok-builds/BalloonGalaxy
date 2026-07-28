@@ -31,18 +31,18 @@ export default function WhyChooseUs({ onOpenQuoteModal }) {
   ];
 
   return (
-    <section className="py-24 bg-white relative overflow-hidden">
+    <section className="py-24 bg-[#0B0A0E] relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Title */}
         <div className="text-center max-w-3xl mx-auto mb-20">
-          <span className="text-xs uppercase tracking-widest text-[#8162BB] font-semibold block mb-3">
+          <span className="inline-block border border-[#8162BB]/40 bg-[#F3EEF9]/10 text-[#8162BB] text-xs font-semibold uppercase tracking-widest px-4 py-1.5 rounded-full mb-3">
             Why People Choose Balloon Galaxy
           </span>
-          <h2 className="font-serif text-3xl sm:text-5xl font-normal text-neutral-900 leading-tight mb-4">
+          <h2 className="font-serif text-3xl sm:text-5xl font-normal text-white leading-tight mb-4">
             Uncompromising Luxury & Care
           </h2>
-          <p className="text-neutral-600 text-base font-light">
+          <p className="text-neutral-400 text-base font-light">
             We care about every single detail, so you can relax and enjoy your special day without the stress.
           </p>
         </div>
@@ -56,32 +56,32 @@ export default function WhyChooseUs({ onOpenQuoteModal }) {
             >
               {/* Large Image Side */}
               <div className="w-full lg:w-1/2">
-                <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-neutral-200/80 group">
+                <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-purple-900/30 group">
                   <img
                     src={item.image}
                     alt={item.title}
                     loading="lazy"
                     className="w-full h-[400px] sm:h-[500px] object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-60" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-80" />
                 </div>
               </div>
 
               {/* Text Side */}
               <div className="w-full lg:w-1/2 max-w-xl">
-                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#F3EEF9] text-[#8162BB] text-xs font-semibold mb-4">
+                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#8162BB]/20 text-[#C4B8DC] border border-[#8162BB]/30 text-xs font-semibold mb-4">
                   <Award className="w-3.5 h-3.5" /> Key Advantage 0{idx + 1}
                 </div>
 
-                <h3 className="font-serif text-2xl sm:text-4xl font-normal text-neutral-900 leading-snug mb-4">
+                <h3 className="font-serif text-2xl sm:text-4xl font-normal text-white leading-snug mb-4">
                   {item.title}
                 </h3>
 
-                <p className="text-neutral-600 text-base font-light leading-relaxed mb-6">
+                <p className="text-neutral-300 text-base font-light leading-relaxed mb-6">
                   {item.desc}
                 </p>
 
-                <ul className="space-y-2.5 mb-8 text-sm text-neutral-700">
+                <ul className="space-y-2.5 mb-8 text-sm text-neutral-300">
                   <li className="flex items-center gap-2">
                     <CheckCircle2 className="w-4 h-4 text-[#8162BB]" />
                     <span>Personalized service managed directly by Kam</span>

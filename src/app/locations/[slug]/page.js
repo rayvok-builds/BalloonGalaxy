@@ -20,7 +20,7 @@ export default function LocationDetailPage({ params }) {
   }
 
   return (
-    <div className="py-12 bg-[#FAF8F5]">
+    <div className="py-12 bg-[#0B0A0E]">
       
       {/* Back Link */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8">
@@ -31,23 +31,23 @@ export default function LocationDetailPage({ params }) {
 
       {/* Hero */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
-        <div className="bg-white rounded-3xl p-8 sm:p-12 border border-neutral-200 shadow-xl grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="bg-[#121118] rounded-3xl p-8 sm:p-12 border border-purple-900/30 shadow-2xl grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#F3EEF9] text-[#8162BB] text-xs font-semibold mb-4">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#8162BB]/20 border border-[#8162BB]/30 text-[#C4B8DC] text-xs font-semibold mb-4">
               <MapPin className="w-3.5 h-3.5" /> Local Specialist in {loc.cityName}
             </div>
-            <h1 className="font-serif text-3xl sm:text-5xl font-normal text-neutral-900 leading-tight mb-4">
+            <h1 className="font-serif text-3xl sm:text-5xl font-normal text-white leading-tight mb-4">
               {loc.heroHeadline}
             </h1>
-            <p className="text-neutral-600 text-base font-light leading-relaxed mb-8">
+            <p className="text-neutral-400 text-base font-light leading-relaxed mb-8">
               {loc.heroSubheading}
             </p>
 
-            <div className="bg-[#FAF8F5] p-5 rounded-2xl border border-neutral-200 mb-8 space-y-2 text-xs text-neutral-700">
-              <div className="font-bold text-neutral-900 text-sm">Key Neighborhoods Covered:</div>
+            <div className="bg-[#1A1921] p-5 rounded-2xl border border-purple-900/30 mb-8 space-y-2 text-xs text-neutral-300">
+              <div className="font-bold text-white text-sm">Key Neighborhoods Covered:</div>
               <div className="flex flex-wrap gap-2 pt-1">
                 {loc.areasServed.map((area, idx) => (
-                  <span key={idx} className="bg-white border border-neutral-200 px-3 py-1 rounded-full">
+                  <span key={idx} className="bg-[#121118] border border-purple-900/40 px-3 py-1 rounded-full text-neutral-200">
                     📍 {area}
                   </span>
                 ))}
@@ -63,7 +63,7 @@ export default function LocationDetailPage({ params }) {
           </div>
 
           {/* Interactive Google Map Embed */}
-          <div className="relative h-96 w-full rounded-2xl overflow-hidden shadow-xl border border-neutral-200">
+          <div className="relative h-96 w-full rounded-2xl overflow-hidden shadow-2xl border border-purple-900/30">
             <iframe
               title={`Google Map for ${loc.cityName}`}
               src={loc.googleMapEmbed}
@@ -78,21 +78,21 @@ export default function LocationDetailPage({ params }) {
 
       {/* Local Content & Popular Venues */}
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 my-16">
-        <div className="bg-white rounded-3xl p-8 sm:p-12 border border-neutral-200 shadow-md space-y-6">
-          <h2 className="font-serif text-2xl font-semibold text-neutral-900">
+        <div className="bg-[#121118] rounded-3xl p-8 sm:p-12 border border-purple-900/30 shadow-2xl space-y-6">
+          <h2 className="font-serif text-2xl font-semibold text-white">
             Luxury Balloon Styling Services in {loc.cityName}
           </h2>
-          <p className="text-neutral-700 text-base font-light leading-relaxed">
+          <p className="text-neutral-300 text-base font-light leading-relaxed">
             {loc.introText}
           </p>
 
-          <div className="pt-4 border-t border-neutral-200">
-            <h3 className="font-semibold text-neutral-900 text-base mb-3 flex items-center gap-2">
+          <div className="pt-4 border-t border-purple-900/30">
+            <h3 className="font-semibold text-white text-base mb-3 flex items-center gap-2">
               <Building2 className="w-4 h-4 text-[#8162BB]" /> Popular Venues & Hotels We Style in {loc.cityName}:
             </h3>
-            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-neutral-700 font-medium">
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-neutral-300 font-medium">
               {loc.popularVenues.map((v, i) => (
-                <li key={i} className="flex items-center gap-2 bg-[#FAF8F5] p-3 rounded-xl border border-neutral-200">
+                <li key={i} className="flex items-center gap-2 bg-[#1A1921] p-3 rounded-xl border border-purple-900/30">
                   <CheckCircle2 className="w-3.5 h-3.5 text-[#8162BB]" /> {v}
                 </li>
               ))}

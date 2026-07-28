@@ -70,15 +70,15 @@ export default function TrustBar() {
   ];
 
   return (
-    <section className="bg-[#FAF8F5]  py-12 sm:py-16 px-4 sm:px-6 lg:px-8 relative z-20">
+    <section className="bg-[#121118] border-y border-purple-900/20 py-12 sm:py-16 px-4 sm:px-6 lg:px-8 relative z-20">
       <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-2 h-[50vh] md:grid-cols-4 gap-8 md:gap-12 text-center">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 text-center">
           {stats.map((stat, idx) => (
             <div key={idx} className="flex flex-col items-center justify-center">
-              <div className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-neutral-900 tracking-tight mb-2">
+              <div className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-white tracking-tight mb-2">
                 <CountUpNumber end={stat.value} suffix={stat.suffix} />
               </div>
-              <div className="text-xs sm:text-sm text-neutral-600 font-medium max-w-[180px] leading-snug">
+              <div className="text-xs sm:text-sm text-neutral-400 font-medium max-w-[180px] leading-snug">
                 {stat.label}
               </div>
             </div>

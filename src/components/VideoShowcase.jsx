@@ -33,7 +33,7 @@ export default function VideoShowcase() {
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 text-amber-300 text-xs font-semibold mb-4">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-amber-300 text-xs font-semibold mb-4 uppercase tracking-wider">
             <Instagram className="w-3.5 h-3.5" /> Behind The Scenes Magic
           </div>
           <h2 className="font-serif text-3xl sm:text-5xl font-normal text-white leading-tight mb-4">

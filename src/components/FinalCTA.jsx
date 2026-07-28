@@ -11,7 +11,7 @@ export default function FinalCTA({ onOpenQuoteModal }) {
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         
-        <span className="text-xs uppercase tracking-widest text-[#D4AF37] font-semibold block mb-4">
+        <span className="inline-block border border-[#D4AF37]/40 bg-[#D4AF37]/10 text-[#D4AF37] text-xs font-semibold uppercase tracking-widest px-4 py-1.5 rounded-full mb-4">
           Ready to Start Planning?
         </span>
 

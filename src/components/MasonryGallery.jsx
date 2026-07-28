@@ -51,20 +51,20 @@ export default function MasonryGallery({ onOpenQuoteModal }) {
   };
 
   return (
-    <section ref={sectionRef} id="portfolio" className="py-20 bg-[#FAF8F5] relative overflow-hidden">
+    <section ref={sectionRef} id="portfolio" className="py-20 bg-[#0B0A0E] relative overflow-hidden">
       
       {/* Background Soft Glow */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-[#8162BB]/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-[#8162BB]/10 rounded-full blur-3xl pointer-events-none" />
 
       {/* Full-width Screen Container */}
       <div className="w-full px-3 sm:px-6 lg:px-8 xl:px-10 relative z-10">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-10">
-          <span className="inline-block text-xs rounded-full border border-[#8162BB]/50 px-4 py-1.5 uppercase tracking-widest text-[#8162BB] font-semibold mb-3">
+          <span className="inline-block text-xs rounded-full border border-[#8162BB]/50 bg-[#F3EEF9]/10 px-4 py-1.5 uppercase tracking-widest text-[#8162BB] font-semibold mb-3">
             Made to Be Remembered
           </span>
-          <h2 className="font-serif text-3xl sm:text-5xl font-normal text-neutral-900 leading-tight mb-2">
+          <h2 className="font-serif text-3xl sm:text-5xl font-normal text-white leading-tight mb-2">
             Beautiful moments begin with beautiful designs. See what we've created.
           </h2>
         </div>
@@ -79,8 +79,8 @@ export default function MasonryGallery({ onOpenQuoteModal }) {
               aria-label="Previous categories"
               className={`w-10 h-10 rounded-full flex-shrink-0 flex items-center justify-center transition-all duration-300 ${
                 canPrev
-                  ? 'bg-white border border-neutral-300 text-neutral-800 hover:bg-[#8162BB] hover:border-[#8162BB] hover:text-white shadow-sm cursor-pointer'
-                  : 'bg-neutral-100 border border-neutral-200 text-neutral-400 cursor-not-allowed opacity-40'
+                  ? 'bg-[#121118] border border-purple-900/40 text-white hover:bg-[#8162BB] hover:border-[#8162BB] shadow-sm cursor-pointer'
+                  : 'bg-[#0B0A0E] border border-neutral-800 text-neutral-600 cursor-not-allowed opacity-40'
               }`}
             >
               <ChevronLeft className="w-5 h-5" />
@@ -94,8 +94,8 @@ export default function MasonryGallery({ onOpenQuoteModal }) {
                   onClick={() => setSelectedCategory(cat.id)}
                   className={`px-3 py-2.5 text-xs font-semibold tracking-wide uppercase transition-all duration-300 truncate rounded-full ${
                     selectedCategory === cat.id
-                      ? 'bg-[#8162BB] text-white shadow-md shadow-purple-900/20'
-                      : 'bg-white text-neutral-700 hover:bg-[#F3EEF9] hover:text-[#8162BB] border border-neutral-200/80'
+                      ? 'bg-[#8162BB] text-white shadow-md shadow-purple-950'
+                      : 'bg-[#121118] text-neutral-300 hover:bg-[#231C32] hover:text-[#8162BB] border border-purple-900/30'
                   }`}
                 >
                   {cat.label}
@@ -110,8 +110,8 @@ export default function MasonryGallery({ onOpenQuoteModal }) {
               aria-label="Next categories"
               className={`w-10 h-10 rounded-full flex-shrink-0 flex items-center justify-center transition-all duration-300 ${
                 canNext
-                  ? 'bg-white border border-neutral-300 text-neutral-800 hover:bg-[#8162BB] hover:border-[#8162BB] hover:text-white shadow-sm cursor-pointer'
-                  : 'bg-neutral-100 border border-neutral-200 text-neutral-400 cursor-not-allowed opacity-40'
+                  ? 'bg-[#121118] border border-purple-900/40 text-white hover:bg-[#8162BB] hover:border-[#8162BB] shadow-sm cursor-pointer'
+                  : 'bg-[#0B0A0E] border border-neutral-800 text-neutral-600 cursor-not-allowed opacity-40'
               }`}
             >
               <ChevronRight className="w-5 h-5" />
@@ -133,7 +133,7 @@ export default function MasonryGallery({ onOpenQuoteModal }) {
               style={{
                 transitionDelay: `${(idx % 10) * 80}ms`,
               }}
-              className={`masonry-item group relative  overflow-hidden bg-neutral-900 border border-neutral-200/50 cursor-pointer transition-all duration-700 ease-out rounded-lg ${
+              className={`masonry-item group relative overflow-hidden bg-neutral-900 border border-purple-900/30 cursor-pointer transition-all duration-700 ease-out rounded-lg ${
                 isRevealed
                   ? 'opacity-100 translate-y-0'
                   : 'opacity-0 translate-y-16 pointer-events-none'

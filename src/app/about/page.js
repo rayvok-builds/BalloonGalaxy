@@ -10,15 +10,15 @@ export default function AboutPage() {
   const [isQuoteOpen, setIsQuoteOpen] = useState(false);
 
   return (
-    <div className="py-12 sm:py-20 bg-[#FAF8F5]">
+    <div className="py-12 sm:py-20 bg-[#0B0A0E]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16 text-center">
-        <span className="text-xs uppercase tracking-widest text-[#8162BB] font-semibold block mb-3">
+        <span className="inline-block border border-[#8162BB]/40 bg-[#F3EEF9]/10 text-[#8162BB] text-xs font-semibold uppercase tracking-widest px-4 py-1.5 rounded-full mb-3">
           Founded October 2022
         </span>
-        <h1 className="font-serif text-4xl sm:text-6xl font-normal text-neutral-900 leading-tight mb-6">
+        <h1 className="font-serif text-4xl sm:text-6xl font-normal text-white leading-tight mb-6">
           The Story of Balloon Galaxy
         </h1>
-        <p className="text-neutral-600 text-base sm:text-lg font-light max-w-3xl mx-auto leading-relaxed">
+        <p className="text-neutral-400 text-base sm:text-lg font-light max-w-3xl mx-auto leading-relaxed">
           How a qualified corporate accountant left the desk to spend more time with her two boys and build Birmingham & Coventry’s favorite luxury event decor business.
         </p>
       </div>
@@ -28,22 +28,22 @@ export default function AboutPage() {
 
       {/* Story Narrative Box */}
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 my-20">
-        <div className="bg-white rounded-3xl p-8 sm:p-12 border border-neutral-200/80 shadow-xl space-y-6 text-neutral-700 font-light text-base leading-relaxed">
-          <h2 className="font-serif text-2xl sm:text-3xl font-semibold text-neutral-900 mb-4">
+        <div className="bg-[#121118] rounded-3xl p-8 sm:p-12 border border-purple-900/30 shadow-2xl space-y-6 text-neutral-300 font-light text-base leading-relaxed">
+          <h2 className="font-serif text-2xl sm:text-3xl font-semibold text-white mb-4">
             From Balance Sheets to Luxury Balloon Artistry
           </h2>
           <p>
             In October 2022, Kam took a bold leap of faith. As a qualified accountant working long corporate hours, she wanted a career that allowed her to spend precious quality time with her two growing boys while expressing her deep love for creativity, color, and design.
           </p>
           <p>
-            What started as a passion for styling family birthday parties quickly grew into <strong>Balloon Galaxy</strong>. Today, Kam manages client relations, financial accounting, balloon orders, color mixing, double-stuffing, and vinyl lettering. Her corporate accounting background means every client receives bulletproof organization, rapid responses, and transparent pricing.
+            What started as a passion for styling family birthday parties quickly grew into <strong className="text-white font-semibold">Balloon Galaxy</strong>. Today, Kam manages client relations, financial accounting, balloon orders, color mixing, double-stuffing, and vinyl lettering. Her corporate accounting background means every client receives bulletproof organization, rapid responses, and transparent pricing.
           </p>
           <p>
-            Sandeep joins Kam on event days, taking charge of prop craftsmanship, custom backdrop painting, weighted structural base safety, and precision venue setup. Together, they have styled over 1800 events and earned <strong>143+ 5★ Google reviews</strong>.
+            Sandeep joins Kam on event days, taking charge of prop craftsmanship, custom backdrop painting, weighted structural base safety, and precision venue setup. Together, they have styled over 1800 events and earned <strong className="text-amber-300 font-semibold">143+ 5★ Google reviews</strong>.
           </p>
 
-          <div className="pt-6 border-t border-neutral-200 flex flex-wrap items-center justify-between gap-4">
-            <div className="flex items-center gap-2 text-sm font-semibold text-neutral-900">
+          <div className="pt-6 border-t border-purple-900/30 flex flex-wrap items-center justify-between gap-4">
+            <div className="flex items-center gap-2 text-sm font-semibold text-white">
               <Star className="w-4 h-4 fill-[#D4AF37] text-[#D4AF37]" />
               <span>5.0 Rating • 143 Verified Google Reviews</span>
             </div>

@@ -37,18 +37,18 @@ export default function HowItWorks({ onOpenQuoteModal }) {
   ];
 
   return (
-    <section className="py-24 bg-[#FAF8F5] relative">
+    <section className="py-24 bg-[#121118] relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-xs uppercase tracking-widest text-[#8162BB] font-semibold block mb-3">
+          <span className="inline-block border border-[#8162BB]/40 bg-[#F3EEF9]/10 text-[#8162BB] text-xs font-semibold uppercase tracking-widest px-4 py-1.5 rounded-full mb-3">
             Simple 5-Step Process
           </span>
-          <h2 className="font-serif text-3xl sm:text-5xl font-normal text-neutral-900 leading-tight mb-4">
+          <h2 className="font-serif text-3xl sm:text-5xl font-normal text-white leading-tight mb-4">
             It’s Easy to Get Started
           </h2>
-          <p className="text-neutral-600 text-base font-light">
+          <p className="text-neutral-400 text-base font-light">
             We handle everything from initial concept to post-party cleanup so you can be a guest at your own event.
           </p>
         </div>
@@ -60,31 +60,31 @@ export default function HowItWorks({ onOpenQuoteModal }) {
             return (
               <div
                 key={idx}
-                className="relative bg-white rounded-3xl p-6 border border-neutral-200/80 shadow-sm flex flex-col justify-between hover-lift group"
+                className="relative bg-[#1A1921] rounded-3xl p-6 border border-purple-900/30 shadow-2xl flex flex-col justify-between hover-lift group"
               >
                 <div>
                   {/* Step Number & Icon */}
                   <div className="flex items-center justify-between mb-6">
-                    <span className="font-serif text-3xl font-bold text-[#8162BB]/30 group-hover:text-[#8162BB] transition-colors">
+                    <span className="font-serif text-3xl font-bold text-[#8162BB]/50 group-hover:text-[#8162BB] transition-colors">
                       {item.step}
                     </span>
-                    <div className="w-10 h-10 rounded-2xl bg-[#F3EEF9] text-[#8162BB] flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <div className="w-10 h-10 rounded-2xl bg-[#8162BB]/20 text-[#C4B8DC] border border-[#8162BB]/30 flex items-center justify-center group-hover:scale-110 transition-transform">
                       <IconComp className="w-5 h-5" />
                     </div>
                   </div>
 
-                  <h3 className="font-serif text-lg font-semibold text-neutral-900 mb-2">
+                  <h3 className="font-serif text-lg font-semibold text-white mb-2">
                     {item.title}
                   </h3>
 
-                  <p className="text-xs text-neutral-600 font-light leading-relaxed">
+                  <p className="text-xs text-neutral-400 font-light leading-relaxed">
                     {item.desc}
                   </p>
                 </div>
 
                 {/* Connector Arrow (Desktop) */}
                 {idx < steps.length - 1 && (
-                  <div className="hidden md:block absolute -right-3 top-1/2 -translate-y-1/2 z-10 text-neutral-300 font-serif text-xl">
+                  <div className="hidden md:block absolute -right-3 top-1/2 -translate-y-1/2 z-10 text-purple-900/50 font-serif text-xl">
                     →
                   </div>
                 )}

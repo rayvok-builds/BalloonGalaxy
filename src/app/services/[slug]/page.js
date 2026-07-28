@@ -19,7 +19,7 @@ export default function ServiceDetailPage({ params }) {
   }
 
   return (
-    <div className="py-12 bg-[#FAF8F5]">
+    <div className="py-12 bg-[#0B0A0E]">
       
       {/* Back Link */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8">
@@ -30,21 +30,21 @@ export default function ServiceDetailPage({ params }) {
 
       {/* Hero Header */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center bg-white rounded-3xl p-8 sm:p-12 border border-neutral-200 shadow-xl">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center bg-[#121118] rounded-3xl p-8 sm:p-12 border border-purple-900/30 shadow-2xl">
           <div>
-            <span className="text-xs uppercase tracking-widest text-[#8162BB] font-semibold block mb-3">
+            <span className="inline-block border border-[#8162BB]/40 bg-[#F3EEF9]/10 text-[#8162BB] text-xs font-semibold uppercase tracking-widest px-4 py-1.5 rounded-full mb-3">
               Specialized Event Styling
             </span>
-            <h1 className="font-serif text-3xl sm:text-5xl font-normal text-neutral-900 leading-tight mb-4">
+            <h1 className="font-serif text-3xl sm:text-5xl font-normal text-white leading-tight mb-4">
               {service.heroHeadline}
             </h1>
-            <p className="text-neutral-600 text-base font-light leading-relaxed mb-8">
+            <p className="text-neutral-400 text-base font-light leading-relaxed mb-8">
               {service.heroSubheading}
             </p>
 
             <div className="space-y-3 mb-8">
               {service.features.map((feat, i) => (
-                <div key={i} className="flex items-center gap-3 text-sm text-neutral-800">
+                <div key={i} className="flex items-center gap-3 text-sm text-neutral-300">
                   <CheckCircle2 className="w-4 h-4 text-[#8162BB] shrink-0" />
                   <span>{feat}</span>
                 </div>
@@ -59,7 +59,7 @@ export default function ServiceDetailPage({ params }) {
             </button>
           </div>
 
-          <div className="relative h-96 sm:h-[450px] w-full rounded-2xl overflow-hidden shadow-2xl">
+          <div className="relative h-96 sm:h-[450px] w-full rounded-2xl overflow-hidden shadow-2xl border border-purple-900/30">
             <img
               src={service.heroImage}
               alt={service.title}
@@ -71,15 +71,15 @@ export default function ServiceDetailPage({ params }) {
 
       {/* Description Content & SEO Copy */}
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 my-16">
-        <div className="bg-white rounded-3xl p-8 sm:p-12 border border-neutral-200 shadow-md space-y-6">
-          <h2 className="font-serif text-2xl font-semibold text-neutral-900">
+        <div className="bg-[#121118] rounded-3xl p-8 sm:p-12 border border-purple-900/30 shadow-2xl space-y-6">
+          <h2 className="font-serif text-2xl font-semibold text-white">
             About Our {service.title} in Birmingham & West Midlands
           </h2>
-          <p className="text-neutral-700 text-base font-light leading-relaxed">
+          <p className="text-neutral-300 text-base font-light leading-relaxed">
             {service.description}
           </p>
 
-          <div className="bg-[#F3EEF9] rounded-2xl p-6 border border-[#8162BB]/20 text-xs text-neutral-800 space-y-2">
+          <div className="bg-[#1A1921] rounded-2xl p-6 border border-purple-900/30 text-xs text-neutral-300 space-y-2">
             <div className="font-bold uppercase text-[#8162BB]">Why Choose Balloon Galaxy For {service.title}?</div>
             <div>• Founded by Kam (former qualified accountant) ensuring meticulous execution and 100% reliability.</div>
             <div>• Prop painting and structural prep by Sandeep for safety and aesthetic harmony.</div>
@@ -91,16 +91,16 @@ export default function ServiceDetailPage({ params }) {
       {/* Service FAQs */}
       {service.faqs && service.faqs.length > 0 && (
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
-          <h3 className="font-serif text-2xl font-semibold text-neutral-900 mb-6 text-center">
+          <h3 className="font-serif text-2xl font-semibold text-white mb-6 text-center">
             {service.title} FAQs
           </h3>
           <div className="space-y-4">
             {service.faqs.map((faq, i) => (
-              <div key={i} className="bg-white p-6 rounded-2xl border border-neutral-200">
-                <h4 className="font-semibold text-neutral-900 text-base mb-2 flex items-center gap-2">
+              <div key={i} className="bg-[#121118] p-6 rounded-2xl border border-purple-900/30">
+                <h4 className="font-semibold text-white text-base mb-2 flex items-center gap-2">
                   <HelpCircle className="w-4 h-4 text-[#8162BB]" /> {faq.question}
                 </h4>
-                <p className="text-neutral-600 text-sm font-light leading-relaxed">
+                <p className="text-neutral-400 text-sm font-light leading-relaxed">
                   {faq.answer}
                 </p>
               </div>

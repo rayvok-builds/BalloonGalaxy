@@ -10,18 +10,19 @@
   :root {
     --brand-purple: #8162BB;
     --brand-purple-dark: #5C4092;
-    --brand-purple-light: #F3EEF9;
-    --brand-purple-glow: rgba(129, 98, 187, 0.15);
-    --bg-warm: #FAF8F5;
-    --bg-ivory: #FFFDF9;
-    --text-main: #1A191D;
-    --text-muted: #6B6875;
+    --brand-purple-light: #231C32;
+    --brand-purple-glow: rgba(129, 98, 187, 0.25);
+    --bg-dark: #0B0A0E;
+    --bg-dark-card: #121118;
+    --bg-dark-elevated: #1A1921;
+    --text-main: #F5F3F7;
+    --text-muted: #A39FA9;
     --accent-gold: #D4AF37;
     --accent-gold-soft: #F4E8C1;
   }
 
   body {
-    background-color: var(--bg-warm);
+    background-color: var(--bg-dark);
     color: var(--text-main);
     font-family: 'Inter', sans-serif;
     overflow-x: hidden;
@@ -30,7 +31,6 @@
 
   h1, h2, h3, .font-serif-title {
     font-family: 'Tenor Sans', sans-serif;
-    
   }
 
   .font-subserif {
@@ -38,7 +38,7 @@
   }
 }
 
-/* Custom Utilities for Luxury Theme */
+/* Custom Utilities for Luxury Dark Theme */
 .text-gold {
   color: var(--accent-gold);
 }
@@ -56,19 +56,19 @@
 }
 
 .glass-nav {
-  background: rgba(250, 248, 245, 0.82);
+  background: rgba(11, 10, 14, 0.88);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
 }
 
 .glass-card {
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(18, 17, 24, 0.75);
   backdrop-filter: blur(12px);
-  border: 1px solid rgba(129, 98, 187, 0.1);
+  border: 1px solid rgba(129, 98, 187, 0.2);
 }
 
 .glass-dark {
-  background: rgba(26, 25, 29, 0.85);
+  background: rgba(11, 10, 14, 0.92);
   backdrop-filter: blur(16px);
 }
 
@@ -77,10 +77,10 @@
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #FAF8F5;
+  background: #0B0A0E;
 }
 ::-webkit-scrollbar-thumb {
-  background: #C4B8DC;
+  background: #3A324A;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {

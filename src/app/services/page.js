@@ -11,18 +11,18 @@ export default function ServicesPage() {
   const [isQuoteOpen, setIsQuoteOpen] = useState(false);
 
   return (
-    <div className="py-16 bg-[#FAF8F5]">
+    <div className="py-16 bg-[#0B0A0E]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-xs uppercase tracking-widest text-[#8162BB] font-semibold block mb-3">
+          <span className="inline-block border border-[#8162BB]/40 bg-[#F3EEF9]/10 text-[#8162BB] text-xs font-semibold uppercase tracking-widest px-4 py-1.5 rounded-full mb-3">
             Bespoke Styling Options
           </span>
-          <h1 className="font-serif text-4xl sm:text-6xl font-normal text-neutral-900 leading-tight mb-4">
+          <h1 className="font-serif text-4xl sm:text-6xl font-normal text-white leading-tight mb-4">
             Our Event Decor Services
           </h1>
-          <p className="text-neutral-600 text-base font-light">
+          <p className="text-neutral-400 text-base font-light">
             Explore our 15 specialized event balloon decoration services across Birmingham, Coventry & the West Midlands.
           </p>
         </div>
@@ -32,7 +32,7 @@ export default function ServicesPage() {
           {SERVICES_DATA.map((svc) => (
             <div
               key={svc.slug}
-              className="bg-white rounded-3xl overflow-hidden border border-neutral-200/80 shadow-md hover-lift flex flex-col justify-between"
+              className="bg-[#121118] rounded-3xl overflow-hidden border border-purple-900/30 shadow-2xl hover-lift flex flex-col justify-between"
             >
               <div className="relative h-56 w-full overflow-hidden">
                 <img
@@ -45,14 +45,14 @@ export default function ServicesPage() {
 
               <div className="p-6 flex-1 flex flex-col justify-between">
                 <div>
-                  <h3 className="font-serif text-xl font-semibold text-neutral-900 mb-2">
+                  <h3 className="font-serif text-xl font-semibold text-white mb-2">
                     {svc.title}
                   </h3>
-                  <p className="text-xs text-neutral-600 font-light leading-relaxed mb-4 line-clamp-3">
+                  <p className="text-xs text-neutral-400 font-light leading-relaxed mb-4 line-clamp-3">
                     {svc.heroSubheading}
                   </p>
                   
-                  <ul className="space-y-1.5 mb-6 text-xs text-neutral-700">
+                  <ul className="space-y-1.5 mb-6 text-xs text-neutral-300">
                     {svc.features.slice(0, 2).map((f, i) => (
                       <li key={i} className="flex items-center gap-1.5">
                         <Check className="w-3.5 h-3.5 text-[#8162BB]" /> {f}
@@ -61,7 +61,7 @@ export default function ServicesPage() {
                   </ul>
                 </div>
 
-                <div className="pt-4 border-t border-neutral-100 flex items-center justify-between">
+                <div className="pt-4 border-t border-purple-900/30 flex items-center justify-between">
                   <Link
                     href={`/services/${svc.slug}`}
                     className="text-xs font-bold text-[#8162BB] hover:underline flex items-center gap-1"
@@ -71,7 +71,7 @@ export default function ServicesPage() {
 
                   <button
                     onClick={() => setIsQuoteOpen(true)}
-                    className="text-[11px] font-semibold text-neutral-700 hover:text-black"
+                    className="text-[11px] font-semibold text-neutral-400 hover:text-white cursor-pointer"
                   >
                     Quick Quote
                   </button>

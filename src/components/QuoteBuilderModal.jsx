@@ -55,14 +55,14 @@ export default function QuoteBuilderModal({ isOpen, onClose }) {
   const whatsappMessage = `Hi Kam! I built a quote on your website:\n- Event: ${eventType}\n- Style: ${style}\n- Colors: ${colorPalette}\n- Location: ${location}\n- Date: ${eventDate}\n- Name: ${name} (${phone})`;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/80 backdrop-blur-xl animate-in fade-in duration-300">
-      <div className="relative bg-white rounded-3xl max-w-2xl w-full overflow-hidden shadow-2xl border border-neutral-200 flex flex-col max-h-[90vh]">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/85 backdrop-blur-xl animate-in fade-in duration-300">
+      <div className="relative bg-[#121118] rounded-3xl max-w-2xl w-full overflow-hidden shadow-2xl border border-purple-900/40 flex flex-col max-h-[90vh]">
         
         {/* Header */}
         <div className="bg-gradient-to-r from-[#8162BB] to-[#5C4092] p-6 text-white relative">
           <button
             onClick={onClose}
-            className="absolute top-4 right-4 w-9 h-9 rounded-full bg-white/20 hover:bg-white text-white hover:text-black flex items-center justify-center transition-all"
+            className="absolute top-4 right-4 w-9 h-9 rounded-full bg-white/20 hover:bg-white text-white hover:text-black flex items-center justify-center transition-all cursor-pointer"
           >
             <X className="w-5 h-5" />
           </button>
@@ -79,7 +79,7 @@ export default function QuoteBuilderModal({ isOpen, onClose }) {
         </div>
 
         {/* Form Body */}
-        <div className="p-6 sm:p-8 overflow-y-auto flex-1 text-neutral-800">
+        <div className="p-6 sm:p-8 overflow-y-auto flex-1 text-white">
           
           {!submitted ? (
             <form onSubmit={handleSubmit}>
@@ -87,7 +87,7 @@ export default function QuoteBuilderModal({ isOpen, onClose }) {
               {/* STEP 1: Event Type */}
               {step === 1 && (
                 <div className="space-y-6">
-                  <h4 className="font-serif text-lg font-semibold text-neutral-900">
+                  <h4 className="font-serif text-lg font-semibold text-white">
                     1. Select Your Event Type
                   </h4>
                   <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
@@ -96,14 +96,14 @@ export default function QuoteBuilderModal({ isOpen, onClose }) {
                         key={ev.id}
                         type="button"
                         onClick={() => setEventType(ev.id)}
-                        className={`p-4 rounded-2xl border text-left flex flex-col justify-between transition-all ${
+                        className={`p-4 rounded-2xl border text-left flex flex-col justify-between transition-all cursor-pointer ${
                           eventType === ev.id
-                            ? 'border-[#8162BB] bg-[#F3EEF9] ring-2 ring-[#8162BB]/30 font-semibold'
-                            : 'border-neutral-200 hover:border-neutral-400 bg-[#FAF8F5]'
+                            ? 'border-[#8162BB] bg-[#8162BB]/25 ring-2 ring-[#8162BB]/40 font-semibold text-white'
+                            : 'border-purple-900/30 hover:border-purple-900/60 bg-[#1A1921] text-neutral-300'
                         }`}
                       >
                         <span className="text-2xl mb-2">{ev.icon}</span>
-                        <span className="text-xs text-neutral-900 font-medium">{ev.label}</span>
+                        <span className="text-xs font-medium">{ev.label}</span>
                       </button>
                     ))}
                   </div>
@@ -121,7 +121,7 @@ export default function QuoteBuilderModal({ isOpen, onClose }) {
               {/* STEP 2: Preferred Style */}
               {step === 2 && (
                 <div className="space-y-6">
-                  <h4 className="font-serif text-lg font-semibold text-neutral-900">
+                  <h4 className="font-serif text-lg font-semibold text-white">
                     2. Choose Your Decor Style
                   </h4>
                   <div className="space-y-3">
@@ -132,13 +132,13 @@ export default function QuoteBuilderModal({ isOpen, onClose }) {
                         onClick={() => setStyle(st.id)}
                         className={`w-full p-4 rounded-2xl border text-left flex items-center justify-between transition-all cursor-pointer ${
                           style === st.id
-                            ? 'border-[#8162BB] bg-[#F3EEF9] ring-2 ring-[#8162BB]/30'
-                            : 'border-neutral-200 hover:border-neutral-400 bg-[#FAF8F5]'
+                            ? 'border-[#8162BB] bg-[#8162BB]/25 ring-2 ring-[#8162BB]/40'
+                            : 'border-purple-900/30 hover:border-purple-900/60 bg-[#1A1921]'
                         }`}
                       >
                         <div>
-                          <div className="text-sm font-semibold text-neutral-900">{st.label}</div>
-                          <div className="text-xs text-neutral-500 font-light">{st.desc}</div>
+                          <div className="text-sm font-semibold text-white">{st.label}</div>
+                          <div className="text-xs text-neutral-400 font-light">{st.desc}</div>
                         </div>
                         {style === st.id && <Check className="w-5 h-5 text-[#8162BB]" />}
                       </button>
@@ -149,7 +149,7 @@ export default function QuoteBuilderModal({ isOpen, onClose }) {
                     <button
                       type="button"
                       onClick={() => setStep(1)}
-                      className="w-1/3 border border-neutral-300 text-neutral-700 py-3.5 rounded-2xl text-xs font-semibold cursor-pointer"
+                      className="w-1/3 border border-purple-900/40 text-neutral-300 hover:bg-[#1A1921] py-3.5 rounded-2xl text-xs font-semibold cursor-pointer"
                     >
                       ← Back
                     </button>
@@ -167,7 +167,7 @@ export default function QuoteBuilderModal({ isOpen, onClose }) {
               {/* STEP 3: Color Palette Swatches */}
               {step === 3 && (
                 <div className="space-y-6">
-                  <h4 className="font-serif text-lg font-semibold text-neutral-900">
+                  <h4 className="font-serif text-lg font-semibold text-white">
                     3. Pick Visual Color Palette
                   </h4>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -178,17 +178,17 @@ export default function QuoteBuilderModal({ isOpen, onClose }) {
                         onClick={() => setColorPalette(pal.id)}
                         className={`p-4 rounded-2xl border text-left flex items-center justify-between transition-all cursor-pointer ${
                           colorPalette === pal.id
-                            ? 'border-[#8162BB] bg-[#F3EEF9] ring-2 ring-[#8162BB]/30'
-                            : 'border-neutral-200 hover:border-neutral-400 bg-[#FAF8F5]'
+                            ? 'border-[#8162BB] bg-[#8162BB]/25 ring-2 ring-[#8162BB]/40'
+                            : 'border-purple-900/30 hover:border-purple-900/60 bg-[#1A1921]'
                         }`}
                       >
                         <div>
-                          <div className="text-xs font-semibold text-neutral-900 mb-2">{pal.label}</div>
+                          <div className="text-xs font-semibold text-white mb-2">{pal.label}</div>
                           <div className="flex items-center gap-1.5">
                             {pal.colors.map((c, i) => (
                               <span
                                 key={i}
-                                className="w-5 h-5 rounded-full border border-neutral-300 shadow-sm"
+                                className="w-5 h-5 rounded-full border border-neutral-700 shadow-sm"
                                 style={{ backgroundColor: c }}
                               />
                             ))}
@@ -203,7 +203,7 @@ export default function QuoteBuilderModal({ isOpen, onClose }) {
                     <button
                       type="button"
                       onClick={() => setStep(2)}
-                      className="w-1/3 border border-neutral-300 text-neutral-700 py-3.5 rounded-2xl text-xs font-semibold cursor-pointer"
+                      className="w-1/3 border border-purple-900/40 text-neutral-300 hover:bg-[#1A1921] py-3.5 rounded-2xl text-xs font-semibold cursor-pointer"
                     >
                       ← Back
                     </button>
@@ -221,67 +221,67 @@ export default function QuoteBuilderModal({ isOpen, onClose }) {
               {/* STEP 4: Date, Location & Contact */}
               {step === 4 && (
                 <div className="space-y-4">
-                  <h4 className="font-serif text-lg font-semibold text-neutral-900">
+                  <h4 className="font-serif text-lg font-semibold text-white">
                     4. Event Details & Contact Info
                   </h4>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-xs font-semibold text-neutral-700 mb-1">Your Full Name *</label>
+                      <label className="block text-xs font-semibold text-neutral-300 mb-1">Your Full Name *</label>
                       <input
                         type="text"
                         required
                         value={name}
                         onChange={(e) => setName(e.target.value)}
                         placeholder="e.g. Sarah Jenkins"
-                        className="w-full px-4 py-3 rounded-xl border border-neutral-300 text-xs font-medium focus:border-[#8162BB] focus:outline-none"
+                        className="w-full px-4 py-3 rounded-xl bg-[#0B0A0E] border border-purple-900/40 text-white placeholder:text-neutral-500 text-xs font-medium focus:border-[#8162BB] focus:outline-none"
                       />
                     </div>
                     <div>
-                      <label className="block text-xs font-semibold text-neutral-700 mb-1">Phone / WhatsApp Number *</label>
+                      <label className="block text-xs font-semibold text-neutral-300 mb-1">Phone / WhatsApp Number *</label>
                       <input
                         type="tel"
                         required
                         value={phone}
                         onChange={(e) => setPhone(e.target.value)}
                         placeholder="e.g. 07841 696582"
-                        className="w-full px-4 py-3 rounded-xl border border-neutral-300 text-xs font-medium focus:border-[#8162BB] focus:outline-none"
+                        className="w-full px-4 py-3 rounded-xl bg-[#0B0A0E] border border-purple-900/40 text-white placeholder:text-neutral-500 text-xs font-medium focus:border-[#8162BB] focus:outline-none"
                       />
                     </div>
                   </div>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-xs font-semibold text-neutral-700 mb-1">Event Date *</label>
+                      <label className="block text-xs font-semibold text-neutral-300 mb-1">Event Date *</label>
                       <input
                         type="date"
                         required
                         value={eventDate}
                         onChange={(e) => setEventDate(e.target.value)}
-                        className="w-full px-4 py-3 rounded-xl border border-neutral-300 text-xs font-medium focus:border-[#8162BB] focus:outline-none"
+                        className="w-full px-4 py-3 rounded-xl bg-[#0B0A0E] border border-purple-900/40 text-white text-xs font-medium focus:border-[#8162BB] focus:outline-none"
                       />
                     </div>
                     <div>
-                      <label className="block text-xs font-semibold text-neutral-700 mb-1">Venue Area / Postcode *</label>
+                      <label className="block text-xs font-semibold text-neutral-300 mb-1">Venue Area / Postcode *</label>
                       <input
                         type="text"
                         required
                         value={location}
                         onChange={(e) => setLocation(e.target.value)}
                         placeholder="e.g. Solihull, B91 2EE"
-                        className="w-full px-4 py-3 rounded-xl border border-neutral-300 text-xs font-medium focus:border-[#8162BB] focus:outline-none"
+                        className="w-full px-4 py-3 rounded-xl bg-[#0B0A0E] border border-purple-900/40 text-white placeholder:text-neutral-500 text-xs font-medium focus:border-[#8162BB] focus:outline-none"
                       />
                     </div>
                   </div>
 
                   <div>
-                    <label className="block text-xs font-semibold text-neutral-700 mb-1">Inspiration Notes / Special Requests</label>
+                    <label className="block text-xs font-semibold text-neutral-300 mb-1">Inspiration Notes / Special Requests</label>
                     <textarea
                       rows="3"
                       value={notes}
                       onChange={(e) => setNotes(e.target.value)}
                       placeholder="e.g. Need teddy bear prop hire and custom vinyl name reading 'Sarah's Baby Shower'"
-                      className="w-full px-4 py-3 rounded-xl border border-neutral-300 text-xs font-medium focus:border-[#8162BB] focus:outline-none"
+                      className="w-full px-4 py-3 rounded-xl bg-[#0B0A0E] border border-purple-900/40 text-white placeholder:text-neutral-500 text-xs font-medium focus:border-[#8162BB] focus:outline-none"
                     />
                   </div>
 
@@ -289,7 +289,7 @@ export default function QuoteBuilderModal({ isOpen, onClose }) {
                     <button
                       type="button"
                       onClick={() => setStep(3)}
-                      className="w-1/3 border border-neutral-300 text-neutral-700 py-3.5 rounded-2xl text-xs font-semibold cursor-pointer"
+                      className="w-1/3 border border-purple-900/40 text-neutral-300 hover:bg-[#1A1921] py-3.5 rounded-2xl text-xs font-semibold cursor-pointer"
                     >
                       ← Back
                     </button>
@@ -307,17 +307,17 @@ export default function QuoteBuilderModal({ isOpen, onClose }) {
           ) : (
             /* Confirmation Screen */
             <div className="text-center py-8 space-y-4">
-              <div className="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto text-2xl font-bold">
+              <div className="w-16 h-16 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/40 flex items-center justify-center mx-auto text-2xl font-bold">
                 ✓
               </div>
-              <h4 className="font-serif text-2xl font-semibold text-neutral-900">
+              <h4 className="font-serif text-2xl font-semibold text-white">
                 Thank You, {name}!
               </h4>
-              <p className="text-xs text-neutral-600 max-w-md mx-auto leading-relaxed">
-                Kam has received your quote request for your <span className="font-semibold text-neutral-900">{eventType}</span> on <span className="font-semibold text-neutral-900">{eventDate}</span> in {location}. We will respond within 2-4 hours!
+              <p className="text-xs text-neutral-300 max-w-md mx-auto leading-relaxed">
+                Kam has received your quote request for your <span className="font-semibold text-white">{eventType}</span> on <span className="font-semibold text-white">{eventDate}</span> in {location}. We will respond within 2-4 hours!
               </p>
 
-              <div className="bg-[#FAF8F5] rounded-2xl p-4 border border-neutral-200 text-xs text-left max-w-md mx-auto space-y-1">
+              <div className="bg-[#1A1921] rounded-2xl p-4 border border-purple-900/30 text-xs text-left max-w-md mx-auto space-y-1 text-neutral-300">
                 <div><strong>Event:</strong> {eventType} ({style})</div>
                 <div><strong>Color Palette:</strong> {colorPalette}</div>
                 <div><strong>Location:</strong> {location}</div>
@@ -334,7 +334,7 @@ export default function QuoteBuilderModal({ isOpen, onClose }) {
                 </a>
                 <button
                   onClick={onClose}
-                  className="w-full sm:w-auto border border-neutral-300 text-neutral-700 px-6 py-3 rounded-full text-xs font-medium"
+                  className="w-full sm:w-auto border border-purple-900/40 text-neutral-300 hover:bg-[#1A1921] px-6 py-3 rounded-full text-xs font-medium cursor-pointer"
                 >
                   Close Window
                 </button>

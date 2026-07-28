@@ -14,18 +14,18 @@ export default function FaqAccordion({ onOpenQuoteModal }) {
   );
 
   return (
-    <section id="faq" className="py-24 bg-white relative">
+    <section id="faq" className="py-24 bg-[#0B0A0E] relative">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto mb-12">
-          <span className="text-xs uppercase tracking-widest text-[#8162BB] font-semibold block mb-3">
+          <span className="inline-block border border-[#8162BB]/40 bg-[#F3EEF9]/10 text-[#8162BB] text-xs font-semibold uppercase tracking-widest px-4 py-1.5 rounded-full mb-3">
             SEO & Event Styling Knowledge Hub
           </span>
-          <h2 className="font-serif text-3xl sm:text-5xl font-normal text-neutral-900 leading-tight mb-4">
+          <h2 className="font-serif text-3xl sm:text-5xl font-normal text-white leading-tight mb-4">
             Questions? We’ve Got You Covered
           </h2>
-          <p className="text-neutral-600 text-base font-light">
+          <p className="text-neutral-400 text-base font-light">
             Everything you need to know about booking, color matching, setup logistics, and balloon longevity.
           </p>
         </div>
@@ -38,7 +38,7 @@ export default function FaqAccordion({ onOpenQuoteModal }) {
             placeholder="Search FAQs (e.g. outdoors, colors, deposit, travel)..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full pl-12 pr-4 py-4 rounded-2xl bg-[#FAF8F5] border border-neutral-200 focus:outline-none focus:border-[#8162BB] focus:ring-2 focus:ring-[#8162BB]/20 text-sm font-medium transition-all"
+            className="w-full pl-12 pr-4 py-4 rounded-2xl bg-[#121118] border border-purple-900/30 focus:outline-none focus:border-[#8162BB] focus:ring-2 focus:ring-[#8162BB]/30 text-white placeholder:text-neutral-500 text-sm font-medium transition-all"
           />
         </div>
 
@@ -49,11 +49,11 @@ export default function FaqAccordion({ onOpenQuoteModal }) {
             return (
               <div
                 key={idx}
-                className="bg-[#FAF8F5] rounded-2xl border border-neutral-200/80 overflow-hidden transition-all duration-300"
+                className="bg-[#121118] rounded-2xl border border-purple-900/30 overflow-hidden transition-all duration-300"
               >
                 <button
                   onClick={() => setOpenIndex(isOpen ? null : idx)}
-                  className="w-full px-6 py-5 text-left font-serif text-lg font-medium text-neutral-900 flex items-center justify-between gap-4 hover:text-[#8162BB] transition-colors"
+                  className="w-full px-6 py-5 text-left font-serif text-lg font-medium text-white flex items-center justify-between gap-4 hover:text-[#8162BB] transition-colors"
                 >
                   <span className="flex items-center gap-3">
                     <HelpCircle className="w-4 h-4 text-[#8162BB] shrink-0" />
@@ -63,7 +63,7 @@ export default function FaqAccordion({ onOpenQuoteModal }) {
                 </button>
 
                 {isOpen && (
-                  <div className="px-6 pb-6 pt-1 text-sm text-neutral-600 font-light leading-relaxed border-t border-neutral-200/40 animate-in fade-in duration-200">
+                  <div className="px-6 pb-6 pt-1 text-sm text-neutral-300 font-light leading-relaxed border-t border-purple-900/30 animate-in fade-in duration-200">
                     {faq.answer}
                   </div>
                 )}
@@ -73,12 +73,12 @@ export default function FaqAccordion({ onOpenQuoteModal }) {
         </div>
 
         {/* Still have questions CTA */}
-        <div className="mt-12 p-8 rounded-3xl bg-[#F3EEF9] border border-[#8162BB]/20 text-center flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="mt-12 p-8 rounded-3xl bg-[#121118] border border-purple-900/40 text-center flex flex-col sm:flex-row items-center justify-between gap-4 shadow-2xl">
           <div className="text-left">
-            <h4 className="font-serif text-lg font-semibold text-neutral-900 mb-1">
+            <h4 className="font-serif text-lg font-semibold text-white mb-1">
               Have a custom question for Kam?
             </h4>
-            <p className="text-xs text-neutral-600 font-light">
+            <p className="text-xs text-neutral-400 font-light">
               Chat directly with Kam on WhatsApp for instant assistance.
             </p>
           </div>

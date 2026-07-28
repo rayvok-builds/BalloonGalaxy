@@ -8,15 +8,15 @@ export default function QuoteBuilderPage() {
   const [isOpen, setIsOpen] = useState(true);
 
   return (
-    <div className="py-16 min-h-[80vh] flex flex-col justify-center items-center bg-[#FAF8F5]">
+    <div className="py-16 min-h-[80vh] flex flex-col justify-center items-center bg-[#0B0A0E]">
       <div className="text-center max-w-xl px-4 mb-8">
-        <span className="text-xs uppercase tracking-widest text-[#8162BB] font-semibold block mb-2">
+        <span className="inline-block border border-[#8162BB]/40 bg-[#F3EEF9]/10 text-[#8162BB] text-xs font-semibold uppercase tracking-widest px-4 py-1.5 rounded-full mb-3">
           Tailored Quotation
         </span>
-        <h1 className="font-serif text-3xl sm:text-5xl font-normal text-neutral-900 mb-4">
+        <h1 className="font-serif text-3xl sm:text-5xl font-normal text-white mb-4">
           Build Your Event Quote
         </h1>
-        <p className="text-neutral-600 text-sm font-light">
+        <p className="text-neutral-400 text-sm font-light">
           Use our interactive visual builder to configure your event type, preferred colors, and date for an instant proposal.
         </p>
 
