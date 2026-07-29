@@ -4,14 +4,13 @@ import { useState } from 'react';
 import Hero from '@/components/Hero';
 import TrustBar from '@/components/TrustBar';
 import MasonryGallery from '@/components/MasonryGallery';
-import EventInspirations from '@/components/EventInspirations';
-import Packages from '@/components/Packages';
-import WhyChooseUs from '@/components/WhyChooseUs';
-import HowItWorks from '@/components/HowItWorks';
-import VideoShowcase from '@/components/VideoShowcase';
-import MeetTheTeam from '@/components/MeetTheTeam';
 import Testimonials from '@/components/Testimonials';
+import Packages from '@/components/Packages';
+import EventInspirations from '@/components/EventInspirations';
+import WhyChooseUs from '@/components/WhyChooseUs';
 import BeforeAfterSlider from '@/components/BeforeAfterSlider';
+import HowItWorks from '@/components/HowItWorks';
+import MeetTheTeam from '@/components/MeetTheTeam';
 import InstagramFeed from '@/components/InstagramFeed';
 import FaqAccordion from '@/components/FaqAccordion';
 import FinalCTA from '@/components/FinalCTA';
@@ -24,49 +23,46 @@ export default function Home() {
 
   return (
     <div className="overflow-hidden">
-      {/* 1. Full-screen Cinematic Hero */}
+      {/* 1. Conversion Hero Section */}
       <Hero onOpenQuoteModal={openQuoteModal} />
 
       {/* 2. Instant Trust Bar (143+ 5★ Google Reviews Spotlight) */}
       <TrustBar />
 
-      {/* 3. Portfolio Gallery (Pinterest Masonry Grid) */}
+      {/* 3. Portfolio Gallery (Show Don't Tell) */}
       <MasonryGallery onOpenQuoteModal={openQuoteModal} />
 
-      {/* 4. Imagine Your Event Like This */}
-      <EventInspirations onOpenQuoteModal={openQuoteModal} />
-
-      {/* 5. Featured Packages (Classic, Premium, Luxury) */}
-      <Packages onOpenQuoteModal={openQuoteModal} />
-
-      {/* 6. Why Choose Balloon Galaxy (Alternating Editorial Feature Layout) */}
-      <WhyChooseUs onOpenQuoteModal={openQuoteModal} />
-
-      {/* 7. How It Works (5-Step Visual Timeline) */}
-      <HowItWorks onOpenQuoteModal={openQuoteModal} />
-
-      {/* 8. Video Section (Auto-Playing Muted Reels) */}
-      {/* <VideoShowcase />  */} 
-
-      {/* 9. Meet The Team (Kam & Sandeep Founder Story) */}
-      <MeetTheTeam />
-
-      {/* 10. Customer Reviews */}
+      {/* 4. Real Client Testimonials (Social Proof after Gallery) */}
       <Testimonials />
 
-      {/* 11. Before & After Venue Slider */}
+      {/* 5. Curated Pricing Packages (Classic, Premium, Luxury) */}
+      <Packages onOpenQuoteModal={openQuoteModal} />
+
+      {/* 6. Inspiration by Occasion (Birthdays, Baby Showers, Weddings) */}
+      <EventInspirations onOpenQuoteModal={openQuoteModal} />
+
+      {/* 7. Why Choose Balloon Galaxy (Value Props & Craftsmanship) */}
+      <WhyChooseUs onOpenQuoteModal={openQuoteModal} />
+
+      {/* 8. Before & After Venue Transformation Slider */}
       <BeforeAfterSlider />
 
-      {/* 12. Instagram Live Feed Grid */}
+      {/* 9. How It Works (5-Step Visual Process Timeline) */}
+      <HowItWorks onOpenQuoteModal={openQuoteModal} />
+
+      {/* 10. Meet The Team (Kam & Sandeep Founder Story) */}
+      <MeetTheTeam />
+
+      {/* 11. Instagram Live Feed Grid */}
       <InstagramFeed />
 
-      {/* 13. FAQ Knowledge Hub */}
+      {/* 12. FAQ Knowledge Hub (Objection Handling) */}
       <FaqAccordion onOpenQuoteModal={openQuoteModal} />
 
-      {/* 14. Strong Final CTA Banner */}
+      {/* 13. Strong Final CTA Banner */}
       <FinalCTA onOpenQuoteModal={openQuoteModal} />
 
-      {/* Embedded Quote Modal Trigger */}
+      {/* Embedded Interactive Quote Modal */}
       <QuoteBuilderModal
         isOpen={isQuoteOpen}
         onClose={() => setIsQuoteOpen(false)}
@@ -74,3 +70,4 @@ export default function Home() {
     </div>
   );
 }
+

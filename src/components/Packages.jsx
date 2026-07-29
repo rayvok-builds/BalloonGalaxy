@@ -1,10 +1,11 @@
 'use client';
 
 import { useState } from 'react';
-import { Check, Sparkles, Star, ArrowRight, ShieldCheck } from 'lucide-react';
+import { Check, Sparkles, Star, ShieldCheck, Clock } from 'lucide-react';
 
 export default function Packages({ onOpenQuoteModal }) {
-  const [selectedPackage, setSelectedPackage] = useState(null);
+  const currentMonth = new Date().toLocaleString('default', { month: 'long' });
+  const nextMonth = new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toLocaleString('default', { month: 'long' });
 
   const packages = [
     {
@@ -16,13 +17,13 @@ export default function Packages({ onOpenQuoteModal }) {
       bg: "bg-[#1A1921]",
       isDark: true,
       features: [
-        "8ft Organic Balloon Garland",
-        "Personalized Acrylic Welcome Board & Easel",
-        "Custom 2-Tone Double-Stuffed Colors",
-        "Complete On-Site Delivery & Setup",
+        "8ft Organic Balloon Garland Architecture",
+        "Personalized Acrylic Welcome Board & Wood Easel",
+        "Custom Double-Stuffed Luxury Color Matching",
+        "Full On-Site Delivery & Setup Included",
         "Post-Event Prop Collection Included"
       ],
-      ctaText: "Learn More & Book"
+      ctaText: "Get Your Free Quote"
     },
     {
       name: "Premium",
@@ -34,15 +35,15 @@ export default function Packages({ onOpenQuoteModal }) {
       bg: "bg-gradient-to-b from-[#231C32] to-[#1A1921]",
       isDark: true,
       features: [
-        "Full Sailboard Backdrop or 2m Balloon Hoop Frame",
+        "Full Arch Sailboard Backdrop or 2m Balloon Hoop Frame",
         "12ft Lush Organic Balloon Cascade",
-        "Bespoke Vinyl Lettering Calligraphy",
+        "Bespoke Vinyl Lettering & Personalized Calligraphy",
         "Matching Acrylic Display Plinth for Cakes/Flowers",
-        "Double-Stuffed Custom Palette",
-        "Priority Weekend Setup Slot",
-        "Full Setup & Collection Included"
+        "Double-Stuffed Custom Palette Color Styling",
+        "Priority Weekend Setup Slot Guaranteed",
+        "Full Setup & Prop Collection Included"
       ],
-      ctaText: "Select Premium Package"
+      ctaText: "Get Your Free Quote"
     },
     {
       name: "Luxury",
@@ -53,15 +54,15 @@ export default function Packages({ onOpenQuoteModal }) {
       bg: "bg-[#0B0A0E] text-white",
       isDark: true,
       features: [
-        "Multi-Sailboard or Shimmer Wall Installation",
+        "Multi-Sailboard Backdrop or Shimmer Wall Installation",
         "16ft+ Grand Organic Balloon Architecture",
         "Hire of 4ft LED Light-Up Numbers or Letters",
         "Plush Teddy Bears or Luxury Floral Accent Hire",
-        "2x Matching Display Plinths",
+        "2x Matching Display Plinths for Dessert Styling",
         "On-Site Styling Lead Managed by Kam & Sandeep",
-        "VIP Priority Delivery & Late Collection"
+        "VIP Priority Delivery & Late Night Collection"
       ],
-      ctaText: "Get Bespoke Luxury Quote"
+      ctaText: "Get Your Free Quote"
     }
   ];
 
@@ -71,14 +72,16 @@ export default function Packages({ onOpenQuoteModal }) {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="inline-block border border-[#8162BB]/40 bg-[#F3EEF9]/10 text-[#8162BB] text-xs font-semibold uppercase tracking-widest px-4 py-1.5 rounded-full mb-3">
-            Choose the Perfect Style
-          </span>
+          <div className="inline-flex items-center gap-2 bg-[#8162BB]/15 text-[#D4AF37] border border-[#8162BB]/30 text-xs font-semibold px-4 py-1.5 rounded-full mb-4 backdrop-blur-md">
+            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+            <span>Currently Booking Weekend Slots for {currentMonth} &amp; {nextMonth}</span>
+          </div>
+
           <h2 className="font-serif text-3xl sm:text-5xl font-normal text-white leading-tight mb-4">
-            Curated Decor Packages
+            Transparent Pricing &amp; Packages
           </h2>
-          <p className="text-neutral-400 text-base font-light">
-            Whether you need something simple or something truly spectacular, we have a tailored package to suit your celebration.
+          <p className="text-neutral-400 text-base font-light max-w-xl mx-auto">
+            Clear, all-inclusive pricing with zero hidden fees. Every package includes custom color palette matching, delivery, installation, and prop collection.
           </p>
         </div>
 
@@ -117,7 +120,7 @@ export default function Packages({ onOpenQuoteModal }) {
                     {pkg.price}
                   </span>
                   <span className="text-xs block mt-1 text-neutral-400">
-                    *Includes setup, prop hire & collection
+                    *Includes setup, prop hire &amp; collection
                   </span>
                 </div>
 
@@ -137,11 +140,11 @@ export default function Packages({ onOpenQuoteModal }) {
               {/* Action Button */}
               <button
                 onClick={onOpenQuoteModal}
-                className={`w-full py-4 rounded-2xl font-medium text-xs sm:text-sm flex items-center justify-center gap-2 cursor-pointer hover:cursor-pointer transition-all ${
+                className={`w-full py-4 rounded-2xl font-medium text-xs sm:text-sm flex items-center justify-center gap-2 cursor-pointer hover:scale-[1.02] active:scale-[0.98] transition-all ${
                   pkg.name === "Luxury"
                     ? 'bg-amber-400 hover:bg-amber-300 text-neutral-900 font-bold shadow-md'
                     : pkg.popular
-                    ? 'bg-[#8162BB] hover:bg-[#5C4092] text-white shadow-[inset_0_2px_4px_rgba(0,0,0,0.3)]'
+                    ? 'bg-[#8162BB] hover:bg-[#5C4092] text-white shadow-lg'
                     : 'bg-[#231C32] hover:bg-[#2F2642] text-white border border-purple-900/40 shadow-md'
                 }`}
               >
@@ -155,10 +158,11 @@ export default function Packages({ onOpenQuoteModal }) {
         {/* Guarantee Banner */}
         <div className="mt-12 max-w-2xl mx-auto text-center flex items-center justify-center gap-2 text-xs text-neutral-400">
           <ShieldCheck className="w-4 h-4 text-[#8162BB]" />
-          <span>All packages include free delivery within 10 miles of Birmingham & Coventry. Custom additions available.</span>
+          <span>All packages include free delivery within 10 miles of Birmingham &amp; Coventry. Custom additions available upon request.</span>
         </div>
 
       </div>
     </section>
   );
 }
+

@@ -1,8 +1,9 @@
 @import "tailwindcss";
 
 @theme {
-  --font-serif: 'Tenor Sans', sans-serif;
+  --font-serif: 'Inter', sans-serif;
   --font-sans: 'Inter', sans-serif;
+  --font-instrument: 'Instrument Serif', Georgia, serif;
 }
 
 
@@ -30,13 +31,14 @@
   }
 
   h1, h2, h3, .font-serif-title {
-    font-family: 'Tenor Sans', sans-serif;
+    font-family: 'Inter', sans-serif;
   }
 
-  .font-subserif {
-    font-family: 'Cormorant Garamond', Georgia, serif;
+  .font-subserif, .font-instrument {
+    font-family: 'Instrument Serif', Georgia, serif;
   }
 }
+
 
 /* Custom Utilities for Luxury Dark Theme */
 .text-gold {
