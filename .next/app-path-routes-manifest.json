@@ -1,0 +1,16 @@
+{
+  "/_not-found/page": "/_not-found",
+  "/faq/page": "/faq",
+  "/contact/page": "/contact",
+  "/locations/[slug]/page": "/locations/[slug]",
+  "/portfolio/page": "/portfolio",
+  "/about/page": "/about",
+  "/page": "/",
+  "/pricing/page": "/pricing",
+  "/locations/page": "/locations",
+  "/quote-builder/page": "/quote-builder",
+  "/privacy/page": "/privacy",
+  "/services/[slug]/page": "/services/[slug]",
+  "/services/page": "/services",
+  "/terms/page": "/terms"
+}

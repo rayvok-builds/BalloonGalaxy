@@ -161,3 +161,55 @@
 .animate-marquee-left:hover {
   animation-play-state: paused;
 }
+
+/* Hero Background Video-like Ken Burns Zoom Out */
+@keyframes kenBurnsZoomOut {
+  0% {
+    transform: scale(1.18);
+  }
+  100% {
+    transform: scale(1.0);
+  }
+}
+
+.animate-ken-burns {
+  animation: kenBurnsZoomOut 6.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+/* Dual Column Vertical Marquee Animations */
+@keyframes marqueeScrollUp {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes marqueeScrollDown {
+  0% {
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+.animate-marquee-up {
+  display: flex;
+  flex-direction: column;
+  animation: marqueeScrollUp 35s linear infinite;
+}
+
+.animate-marquee-down {
+  display: flex;
+  flex-direction: column;
+  animation: marqueeScrollDown 35s linear infinite;
+}
+
+.animate-marquee-up:hover,
+.animate-marquee-down:hover {
+  animation-play-state: paused;
+}
+
+
