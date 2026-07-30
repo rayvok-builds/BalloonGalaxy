@@ -155,11 +155,7 @@ export default function Packages({ onOpenQuoteModal }) {
           ))}
         </div>
 
-        {/* Guarantee Banner */}
-        <div className="mt-12 max-w-2xl mx-auto text-center flex items-center justify-center gap-2 text-xs text-neutral-400">
-          <ShieldCheck className="w-4 h-4 text-[#8162BB]" />
-          <span>All packages include free delivery within 10 miles of Birmingham &amp; Coventry. Custom additions available upon request.</span>
-        </div>
+  
 
       </div>
     </section>
