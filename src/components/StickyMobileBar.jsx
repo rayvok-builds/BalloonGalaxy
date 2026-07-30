@@ -10,7 +10,7 @@ export default function StickyMobileBar({ onOpenQuoteModal }) {
           href="tel:+447841696582"
           className="flex flex-col items-center justify-center py-2 px-1 rounded-2xl bg-[#1A1921] hover:bg-[#252330] text-white border border-purple-900/30 transition-all active:scale-95 cursor-pointer"
         >
-          <img src="/callIcon - Copy.gif" alt="Call" className="w-5 h-5 mb-0.5 object-contain" />
+          <img src="/callIcon - Copy.gif" alt="Call" className="w-5 h-5 mb-0.5 rounded-sm object-contain" />
           <span className="text-[11px] font-semibold">Call</span>
         </a>
 
