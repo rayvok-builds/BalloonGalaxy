@@ -14,7 +14,7 @@ export const GALLERY_CATEGORIES = [
 export const GALLERY_ITEMS = [
   {
     id: 1,
-    url: "https://res.cloudinary.com/dokrpo5fl/image/upload/v1784978899/747207900_18022285613853271_6768489452173827855_n_qwv9zy.jpg",
+    url: "https://res.cloudinary.com/dokrpo5fl/image/upload/v1785387119/2918bc41-768f-41a0-bc19-0e862eef4e66.png",
     title: "Celestial Pastel Dream Backdrop",
     category: "baby-showers",
     aspectRatio: "aspect-[3/4]",

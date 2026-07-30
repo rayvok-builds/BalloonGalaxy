@@ -16,22 +16,22 @@ export default function EventInspirations() {
     },
     {
       title: "Wedding Entrance",
-      image: "https://res.cloudinary.com/dokrpo5fl/image/upload/v1784978896/745152064_18021964016853271_2886719108912963478_n_xavocn.jpg",
-      link: "/portfolio?category=weddings"
-    },
-    {
-      title: "Corporate Launch",
-      image: "https://res.cloudinary.com/dokrpo5fl/image/upload/v1784978896/746285169_18021678161853271_5030388314847864711_n_mejna5.jpg",
-      link: "/portfolio?category=corporate"
-    },
-    {
-      title: "Bridal Shower",
       image: "https://res.cloudinary.com/dokrpo5fl/image/upload/v1784978894/736420557_18021118742853271_5705423997968146030_n_a1uwor.jpg",
       link: "/portfolio?category=weddings"
     },
     {
-      title: "Graduation & Milestones",
-      image: "https://res.cloudinary.com/dokrpo5fl/image/upload/v1784978896/751784173_18022976744853271_5268845485108318708_n_pilwcg.jpg",
+      title: "Corporate Launch",
+      image: "https://res.cloudinary.com/dokrpo5fl/image/upload/v1785392608/79167c42-9809-4e56-a330-81b2599bdf49.png",
+      link: "/portfolio?category=corporate"
+    },
+    {
+      title: "Bridal Shower",
+      image: "https://res.cloudinary.com/dokrpo5fl/image/upload/v1785392188/Screenshot_20260730_113435_Instagram_pwexas.jpg",
+      link: "/portfolio?category=weddings"
+    },
+    {
+      title: "Sequin Wall",
+      image: "https://res.cloudinary.com/dokrpo5fl/image/upload/v1785392185/Screenshot_20260730_113852_Instagram_qecvid.jpg",
       link: "/portfolio?category=number-stacks"
     }
   ];

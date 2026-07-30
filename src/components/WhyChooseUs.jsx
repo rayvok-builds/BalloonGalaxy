@@ -7,13 +7,13 @@ export default function WhyChooseUs({ onOpenQuoteModal }) {
     {
       title: "Custom Designed For Every Event",
       desc: "No copied designs. Every setup is custom-made to match your personal style, event theme, or corporate brand hex code.",
-      image: "https://res.cloudinary.com/dokrpo5fl/image/upload/v1784978899/747207900_18022285613853271_6768489452173827855_n_qwv9zy.jpg",
+      image: "https://res.cloudinary.com/dokrpo5fl/image/upload/v1785246322/after_p8pzey.jpg",
       reverse: false
     },
     {
       title: "Luxury Quality Double-Stuffed Balloons",
       desc: "We exclusively use professional, double-stuffed balloons to achieve rich matte opacity, zero translucency, and colors that stay fresh throughout your event.",
-      image: "https://res.cloudinary.com/dokrpo5fl/image/upload/v1784978897/753225062_18023418170853271_2517762698763169016_n_vl1moo.jpg",
+      image: "https://res.cloudinary.com/dokrpo5fl/image/upload/v1785393907/a28ecfec-746f-4d04-941f-4032ff506211.png",
       reverse: true
     },
     {
@@ -25,7 +25,7 @@ export default function WhyChooseUs({ onOpenQuoteModal }) {
     {
       title: "Professional Stress-Free Setup & Breakdown",
       desc: "We deliver, inflate, install, and position everything before your guests arrive—and return post-event to safely collect props so you don't lift a finger.",
-      image: "https://res.cloudinary.com/dokrpo5fl/image/upload/v1784978896/753092380_18023160485853271_7024676582473989644_n_rhmif2.jpg",
+      image: "https://res.cloudinary.com/dokrpo5fl/image/upload/v1785394001/81a31a34-a781-4013-8336-f7d2ecebbcd7.png",
       reverse: true
     }
   ];
@@ -37,13 +37,13 @@ export default function WhyChooseUs({ onOpenQuoteModal }) {
         {/* Section Title */}
         <div className="text-center max-w-3xl mx-auto mb-20">
           <span className="inline-block border border-[#8162BB]/40 bg-[#F3EEF9]/10 text-[#8162BB] text-xs font-semibold uppercase tracking-widest px-4 py-1.5 rounded-full mb-3">
-            Why People Choose Balloon Galaxy
+            Why Choose Us?
           </span>
           <h2 className="font-serif text-3xl sm:text-5xl font-normal text-white leading-tight mb-4">
-            Uncompromising Luxury & Care
+            Why Clients Love Balloon Galaxy
           </h2>
           <p className="text-neutral-400 text-base font-light">
-            We care about every single detail, so you can relax and enjoy your special day without the stress.
+            Every detail is handled with care—from your first message until we pack the last balloon.
           </p>
         </div>
 
@@ -52,7 +52,7 @@ export default function WhyChooseUs({ onOpenQuoteModal }) {
           {points.map((item, idx) => (
             <div
               key={idx}
-              className={`flex flex-col ${item.reverse ? 'lg:flex-row-reverse' : 'lg:flex-row'} items-center gap-12 lg:gap-16`}
+              className={`flex flex-col ${item.reverse ? 'lg:flex-row-reverse' : 'lg:flex-row'} items-start gap-12 lg:gap-16`}
             >
               {/* Large Image Side */}
               <div className="w-full lg:w-1/2">
