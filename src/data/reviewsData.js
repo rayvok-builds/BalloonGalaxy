@@ -19,13 +19,13 @@ export const FEATURED_REVIEWS = [
   },
   {
     id: "f2",
-    name: "Anita Viegas",
-    personImage: "https://res.cloudinary.com/dokrpo5fl/image/upload/v1785386862/fb3c9e52-593e-46df-a4a5-cafee861e54e.png",
-    personText: "AV",
-    decoreImage: "https://res.cloudinary.com/dokrpo5fl/image/upload/v1785386790/da69048d-9e65-4c81-9ad4-930372a7cbac.png",
-    feedback: "Such talented and professional service! Made our gender reveal extra special with the decor and everyone loved it! Will definitely recommend to our family and friends! Thank you so much 😊",
+    name: "Tyag Kaur",
+    personImage: null,
+    personText: "TK",
+    decoreImage: "https://res.cloudinary.com/dokrpo5fl/image/upload/v1785899414/df49a0b6-5c57-442a-a50b-b29239009dd8.png",
+    feedback: "I got my 21st birthday arch done off baloon galaxy and the results exceeded expectations. They delivered exactly what I wanted and ensured I was happy with the results before they left!! 10/10 service. no complaints at all",
     rating: 5,
-    event: "Gender Reveal Decor"
+    event: "21st birthday arch"
   },
   {
     id: "f3",
@@ -49,13 +49,13 @@ export const FEATURED_REVIEWS = [
   },
   {
     id: "f5",
-    name: "Shivani Sharma",
+    name: "Poonam B",
     personImage: null,
-    personText: "SS",
-    decoreImage: "https://res.cloudinary.com/dokrpo5fl/image/upload/v1785387385/752efbba-baa5-4346-bd90-58c3390741d9.png",
-    feedback: "Kam created the most wonderful Moana display for my little girls 3rd Birthday Party. So was attentive to everything I wanted and brought my vision to life. She stayed in continuous contact with me, ensuring I was happy every step of the way. Professional and very good at what she does, as well as being a lovely person. It was a pleasure having you, you will no doubt be hearing from me in the future for more celebrations, thank you!",
+    personText: "PB",
+    decoreImage: "https://res.cloudinary.com/dokrpo5fl/image/upload/v1785898616/10a612d8-cc88-4d48-a9e2-23bed196f799.png",
+    feedback: "Thank you so much once again. I’d definitely recommend you to everyone and myself use u again. You guys were very proffesional, prompt and thanks for just doing your own thing and making my little boys bday perfect!",
     rating: 5,
-    event: "Moana Theme 3rd Birthday"
+    event: "1st Birthday Party"
   },
   {
     id: "f6",
