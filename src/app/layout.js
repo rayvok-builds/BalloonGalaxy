@@ -8,6 +8,7 @@ import StickyMobileBar from '@/components/StickyMobileBar';
 import FloatingWhatsApp from '@/components/FloatingWhatsApp';
 import QuoteBuilderModal from '@/components/QuoteBuilderModal';
 import GsapProvider from '@/components/GsapProvider';
+import Preloader from '@/components/Preloader';
 
 export default function RootLayout({ children }) {
   const [isQuoteModalOpen, setIsQuoteModalOpen] = useState(false);
@@ -26,6 +27,7 @@ export default function RootLayout({ children }) {
       </head>
       <body className="bg-[#FAF8F5] text-[#1A191D] antialiased">
         <GsapProvider>
+          <Preloader />
           <Navbar onOpenQuoteModal={() => setIsQuoteModalOpen(true)} />
           
           <main className="min-h-screen">

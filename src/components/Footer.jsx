@@ -120,7 +120,7 @@ export default function Footer() {
         {/* Bottom Credits & Scroll Top */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-neutral-500">
           <div>
-            © {new Date().getFullYear()} Balloon Galaxy. Founded in 2022 by Kam. All rights reserved.
+            © {new Date().getFullYear()} Balloon Galaxy. All rights reserved.
           </div>
 
           <div className="flex items-center gap-6">
