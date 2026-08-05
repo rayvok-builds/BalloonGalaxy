@@ -62,7 +62,7 @@ export default function Hero({ onOpenQuoteModal }) {
               ))}
             </div>
             {/* Stars & Text */}
-            <div className="flex flex-col text-left">
+            <div className="flex flex-col items-center  md:items-start text-left">
               <div className="flex items-center space-x-1">
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} className="w-3.5 h-3.5 fill-[#D4AF37] text-[#D4AF37]" />

@@ -2,39 +2,19 @@
 
 import { useEffect, useState, useRef } from 'react';
 import gsap from 'gsap';
-import { Sparkles, PartyPopper } from 'lucide-react';
+import { Sparkles } from 'lucide-react';
 
 export default function Preloader() {
   const [progress, setProgress] = useState(0);
-  const [loadingText, setLoadingText] = useState('Inflating Elegance...');
   const [isFinished, setIsFinished] = useState(false);
   const containerRef = useRef(null);
   const contentRef = useRef(null);
   const balloonsRef = useRef(null);
 
-  // Status phrases during loading
-  useEffect(() => {
-    const texts = [
-      'Inflating Elegance...',
-      'Styling Luxury Displays...',
-      'Adding Cosmic Glow...',
-      'Welcome to Balloon Galaxy'
-    ];
-    
-    let textIndex = 0;
-    const textInterval = setInterval(() => {
-      textIndex = (textIndex + 1) % texts.length;
-      setLoadingText(texts[textIndex]);
-    }, 550);
-
-    return () => clearInterval(textInterval);
-  }, []);
-
   useEffect(() => {
     // Lock body scrolling during preloader
     document.body.style.overflow = 'hidden';
 
-    // Progress counter animation
     const progressObj = { value: 0 };
     
     const tl = gsap.timeline({
@@ -43,6 +23,7 @@ export default function Preloader() {
       }
     });
 
+    // 0% to 100% loading counter
     tl.to(progressObj, {
       value: 100,
       duration: 1.8,
@@ -60,29 +41,29 @@ export default function Preloader() {
         }
       });
 
-      // 1. Content scale & fade out
+      // 1. Center Content fade out & slight scale
       exitTl.to(contentRef.current, {
         opacity: 0,
-        y: -40,
-        scale: 0.95,
-        duration: 0.4,
+        y: -30,
+        scale: 0.96,
+        duration: 0.35,
         ease: 'power2.in'
       });
 
-      // 2. Balloons accelerate upwards into sky
+      // 2. Multiple Balloons accelerate straight upwards into sky
       if (balloonsRef.current) {
         exitTl.to(balloonsRef.current.children, {
-          y: '-120vh',
-          duration: 0.7,
-          stagger: 0.05,
+          y: '-130vh',
+          duration: 0.75,
+          stagger: 0.04,
           ease: 'power3.in'
         }, '-=0.2');
       }
 
-      // 3. Main Preloader Overlay Curtain Reveal (Bottom-to-Top wipe)
+      // 3. Bottom-to-Top Overlay Curtain Wipe Reveal
       exitTl.to(containerRef.current, {
         yPercent: -100,
-        duration: 0.9,
+        duration: 0.85,
         ease: 'power4.inOut'
       }, '-=0.5');
     }
@@ -94,14 +75,14 @@ export default function Preloader() {
 
   if (isFinished) return null;
 
-  // Balloon color configurations for variety
+  // Rich variety of metallic & pastel floating balloons
   const balloons = [
-    { id: 1, color1: '#8162BB', color2: '#5C4092', left: '8%', size: 90, speed: '4.2s', delay: '0s' },
-    { id: 2, color1: '#D4AF37', color2: '#9A7B1C', left: '22%', size: 110, speed: '3.8s', delay: '0.4s' },
-    { id: 3, color1: '#EC4899', color2: '#BE185D', left: '38%', size: 80, speed: '4.5s', delay: '0.2s' },
-    { id: 4, color1: '#8162BB', color2: '#3B0764', left: '55%', size: 120, speed: '3.6s', delay: '0.6s' },
-    { id: 5, color1: '#F4E8C1', color2: '#D4AF37', left: '72%', size: 95, speed: '4.1s', delay: '0.1s' },
-    { id: 6, color1: '#A855F7', color2: '#6B21A8', left: '86%', size: 105, speed: '3.9s', delay: '0.5s' }
+    { id: 1, color1: '#D4AF37', color2: '#8A6D1B', left: '6%', size: 95, speed: '4.2s', delay: '0s' },
+    { id: 2, color1: '#8162BB', color2: '#4C2882', left: '20%', size: 115, speed: '3.7s', delay: '0.3s' },
+    { id: 3, color1: '#F4E8C1', color2: '#C9B36B', left: '36%', size: 85, speed: '4.4s', delay: '0.15s' },
+    { id: 4, color1: '#EC4899', color2: '#9F1239', left: '52%', size: 125, speed: '3.5s', delay: '0.5s' },
+    { id: 5, color1: '#8162BB', color2: '#3B0764', left: '68%', size: 100, speed: '4.0s', delay: '0.1s' },
+    { id: 6, color1: '#D4AF37', color2: '#9A7B1C', left: '84%', size: 110, speed: '3.8s', delay: '0.4s' }
   ];
 
   return (
@@ -109,28 +90,28 @@ export default function Preloader() {
       ref={containerRef}
       className="fixed inset-0 z-[99999] flex flex-col items-center justify-center bg-[#0B0A0E] text-white overflow-hidden select-none"
     >
-      {/* Background ambient lighting */}
+      {/* Background Ambient Glows */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#8162BB]/20 rounded-full blur-[140px] pointer-events-none" />
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 w-[400px] h-[400px] bg-[#D4AF37]/15 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 w-[450px] h-[450px] bg-[#D4AF37]/15 rounded-full blur-[120px] pointer-events-none" />
 
       {/* Floating Sparkle Dust Particles */}
       <div className="absolute inset-0 pointer-events-none">
-        {[...Array(12)].map((_, i) => (
+        {[...Array(14)].map((_, i) => (
           <div
             key={i}
-            className="absolute rounded-full bg-amber-200 animate-sparkle-glow"
+            className="absolute rounded-full bg-amber-200/80 animate-sparkle-glow"
             style={{
               width: `${Math.random() * 4 + 2}px`,
               height: `${Math.random() * 4 + 2}px`,
               top: `${Math.random() * 90}%`,
               left: `${Math.random() * 95}%`,
-              animationDelay: `${Math.random() * 2}s`
+              animationDelay: `${Math.random() * 2.5}s`
             }}
           />
         ))}
       </div>
 
-      {/* Floating Balloons (Bottom-to-Top Floating Visual Effect) */}
+      {/* Multiple Floating Balloons (Bottom-to-Top Floating Visual Effect) */}
       <div ref={balloonsRef} className="absolute inset-0 pointer-events-none overflow-hidden">
         {balloons.map((b) => (
           <div
@@ -156,7 +137,7 @@ export default function Preloader() {
                   <stop offset="100%" stopColor={b.color2} />
                 </radialGradient>
               </defs>
-              
+
               {/* String */}
               <path
                 d="M50 100 Q48 115 52 125 T49 135"
@@ -165,7 +146,7 @@ export default function Preloader() {
                 fill="none"
               />
 
-              {/* Main Balloon Body */}
+              {/* Balloon Body */}
               <path
                 d="M50 5 C22 5 5 25 5 52 C5 75 32 95 47 98 L50 100 L53 98 C68 95 95 75 95 52 C95 25 78 5 50 5 Z"
                 fill={`url(#balloon-grad-${b.id})`}
@@ -181,7 +162,7 @@ export default function Preloader() {
                 fill="#FFFFFF"
                 fillOpacity="0.45"
               />
-              
+
               {/* Balloon Knot */}
               <polygon points="46,98 54,98 52,103 48,103" fill={b.color2} />
             </svg>
@@ -191,15 +172,21 @@ export default function Preloader() {
 
       {/* Main Center Content */}
       <div ref={contentRef} className="relative z-10 flex flex-col items-center text-center px-4">
-  
+        
+        {/* Brand Luxury Badge */}
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 backdrop-blur-md mb-6 shadow-2xl">
+          <Sparkles className="w-4 h-4 text-[#D4AF37] animate-pulse" />
+          <span className="text-xs uppercase tracking-[0.25em] text-[#D4AF37] font-semibold">
+            Bespoke Event Decor
+          </span>
+        </div>
 
         {/* Title */}
-        <h1 className="text-4xl md:text-6xl font-instrument italic tracking-wide text-white mb-2">
+        <h1 className="text-4xl md:text-6xl font-instrument italic tracking-wide text-white mb-6">
           Balloon Galaxy
         </h1>
-      
 
-        {/* Percentage Counter */}
+        {/* 100% Loading Counter */}
         <div className="relative mb-6">
           <span className="text-6xl md:text-8xl font-extrabold tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-white via-[#F4E8C1] to-[#D4AF37]">
             {progress}
@@ -207,25 +194,13 @@ export default function Preloader() {
           <span className="text-2xl md:text-3xl font-light text-[#D4AF37] ml-1">%</span>
         </div>
 
-        {/* Custom Progress Bar */}
-        <div className="w-64 md:w-80 h-1.5 bg-white/10 rounded-full overflow-hidden mb-4 p-0.5 border border-white/5">
+        {/* Glowing Progress Bar */}
+        <div className="w-64 md:w-80 h-1.5 bg-white/10 rounded-full overflow-hidden p-0.5 border border-white/5 shadow-lg">
           <div
             className="h-full bg-gradient-to-r from-[#8162BB] via-[#D4AF37] to-[#EC4899] rounded-full transition-all duration-150 ease-out shadow-[0_0_12px_rgba(212,175,55,0.6)]"
             style={{ width: `${progress}%` }}
           />
         </div>
-
-        {/* Animated Loading Status Text */}
-        <p className="text-xs tracking-widest uppercase text-gray-400 h-5 transition-all duration-300">
-          {loadingText}
-        </p>
-      </div>
-
-      {/* Subtle bottom indicator */}
-      <div className="absolute bottom-6 left-0 right-0 flex justify-center items-center pointer-events-none">
-        <span className="text-[10px] uppercase tracking-[0.4em] text-white/30">
-          Entering Experience ↑
-        </span>
       </div>
     </div>
   );

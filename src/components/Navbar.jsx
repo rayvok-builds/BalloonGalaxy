@@ -220,7 +220,7 @@ export default function Navbar({ onOpenQuoteModal }) {
             onClick={() => setIsMobileMenuOpen(false)}
             className="block text-sm font-medium text-neutral-200 py-2 border-b border-neutral-800"
           >
-            About Kam & Sandeep
+            About
           </Link>
           <Link
             href="/contact"
@@ -243,7 +243,7 @@ export default function Navbar({ onOpenQuoteModal }) {
 
             <a
               href="tel:+447841696582"
-              className="w-full text-center py-2.5 rounded-full border border-purple-900/40 text-sm font-semibold text-white flex items-center justify-center gap-2 cursor-pointer bg-[#121118]"
+              className="w-full text-center py-2.5 rounded-full border border-white/20 text-sm font-bold text-black flex items-center justify-center gap-2 cursor-pointer bg-white hover:bg-neutral-100 transition-colors shadow-md"
             >
               <img src="/callIcon - Copy.gif" alt="Call" className="w-4 h-4 object-contain" /> Call +44 7841 696582
             </a>
