@@ -152,15 +152,14 @@ export default function BeforeAfterSlider() {
     if (!sectionRef.current || cardsRef.current.length === 0) return;
 
     const cards = cardsRef.current;
+    const mm = gsap.matchMedia();
 
-    // Set initial GSAP positions
-    // Card 1 is visible at yPercent: 0
-    // Cards 2 & 3 start off-screen below (yPercent: 115)
-    gsap.set(cards[0], { yPercent: 0, scale: 1, opacity: 1, pointerEvents: 'auto', transformOrigin: 'top center' });
-    gsap.set(cards[1], { yPercent: 115, scale: 1, opacity: 1, pointerEvents: 'none', transformOrigin: 'top center' });
-    gsap.set(cards[2], { yPercent: 115, scale: 1, opacity: 1, pointerEvents: 'none', transformOrigin: 'top center' });
+    // Desktop & Laptop (width >= 1024px): Apply GSAP Pinned Scroll Stack animation
+    mm.add('(min-width: 1024px)', () => {
+      gsap.set(cards[0], { yPercent: 0, scale: 1, opacity: 1, pointerEvents: 'auto', transformOrigin: 'top center' });
+      gsap.set(cards[1], { yPercent: 115, scale: 1, opacity: 1, pointerEvents: 'none', transformOrigin: 'top center' });
+      gsap.set(cards[2], { yPercent: 115, scale: 1, opacity: 1, pointerEvents: 'none', transformOrigin: 'top center' });
 
-    const ctx = gsap.context(() => {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: sectionRef.current,
@@ -172,8 +171,6 @@ export default function BeforeAfterSlider() {
           invalidateOnRefresh: true,
         }
       });
-
-      // --- 0.0 -> 0.5: Hold Card 1 fully centered & visible alone ---
 
       // --- 0.5 -> 1.5: Card 2 comes UP to stack over Card 1 ---
       tl.to(cards[1], {
@@ -195,8 +192,6 @@ export default function BeforeAfterSlider() {
         ease: 'power1.inOut',
         duration: 1
       }, 0.5);
-
-      // --- 1.5 -> 2.0: Hold Card 2 fully visible ---
 
       // --- 2.0 -> 3.0: Card 3 comes UP to stack over Card 2 ---
       tl.to(cards[2], {
@@ -227,23 +222,33 @@ export default function BeforeAfterSlider() {
         duration: 1
       }, 2.0);
 
-      // --- 3.0 -> 3.5: Hold Card 3 fully visible before unpinning ---
+      return () => {
+        cards.forEach((card) => {
+          if (card) gsap.set(card, { clearProps: 'all' });
+        });
+      };
+    });
 
-    }, sectionRef);
+    // Mobile & Tablet (< 1024px): Clear GSAP inline styles so cards flow naturally one by one without any scale/shrink effect
+    mm.add('(max-width: 1023px)', () => {
+      cards.forEach((card) => {
+        if (card) gsap.set(card, { clearProps: 'all' });
+      });
+    });
 
-    return () => ctx.revert();
+    return () => mm.revert();
   }, []);
 
   return (
-    <section ref={sectionRef} className="relative bg-[#0B0A0E] overflow-hidden">
+    <section ref={sectionRef} className="relative bg-[#0B0A0E] overflow-hidden py-12 lg:py-0">
       {/* Background Ambient Glows */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-purple-900/10 rounded-full blur-[160px] pointer-events-none" />
 
-      {/* Full-screen Pinned Container with Flex Center */}
-      <div ref={pinnedContainerRef} className="min-h-screen h-screen flex flex-col justify-center items-center py-6 sm:py-10 px-4 sm:px-6 lg:px-8 relative z-10 w-full max-w-5xl mx-auto">
+      {/* Pinned Container for Desktop, Normal Flow Container for Mobile/Tablet */}
+      <div ref={pinnedContainerRef} className="py-4 sm:py-6 lg:py-10 px-4 sm:px-6 lg:px-8 relative z-10 w-full max-w-5xl mx-auto lg:min-h-screen lg:h-screen lg:flex lg:flex-col lg:justify-center lg:items-center">
         
         {/* Main Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-8 shrink-0">
+        <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10 lg:mb-8 shrink-0">
           <span className="inline-block border border-[#8162BB]/40 bg-[#F3EEF9]/10 text-[#8162BB] text-xs font-semibold uppercase tracking-widest px-4 py-1.5 rounded-full mb-2 sm:mb-3">
             Real Transformation Impact
           </span>
@@ -255,13 +260,13 @@ export default function BeforeAfterSlider() {
           </p>
         </div>
 
-        {/* Stacked Cards Frame - Vertically Centered */}
-        <div className="relative w-full max-w-4xl h-[370px] sm:h-[460px] lg:h-[490px] overflow-hidden rounded-3xl shrink-0">
+        {/* Card Container: Vertical stack on mobile/tablet, Stacked pinned container on laptop/desktop */}
+        <div className="flex flex-col gap-6 sm:gap-8 lg:gap-0 lg:relative lg:w-full lg:max-w-4xl lg:h-[490px] lg:overflow-hidden lg:rounded-3xl shrink-0 w-full">
           {BEFORE_AFTER_ITEMS.map((item, idx) => (
             <div
               key={item.id}
               ref={(el) => setCardRef(el, idx)}
-              className="absolute inset-0 w-full h-full"
+              className="w-full h-[360px] sm:h-[440px] lg:h-full lg:absolute lg:inset-0"
               style={{ zIndex: 10 + idx }}
             >
               <BeforeAfterCard item={item} index={idx} />
@@ -273,4 +278,6 @@ export default function BeforeAfterSlider() {
     </section>
   );
 }
+
+
 
